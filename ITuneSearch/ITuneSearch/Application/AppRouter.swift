@@ -21,7 +21,7 @@ open class AppRouter {
     // MARK: Methods
     func openApp() {
         setActiveNavigationController(
-            with: UIViewController()//SplashRouter.returnVC()
+            with: SplashRouter.returnVC()
         )
     }
     
