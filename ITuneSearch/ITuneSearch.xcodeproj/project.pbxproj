@@ -31,6 +31,8 @@
 		5C7C96392B64688900E40589 /* ITSNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C96252B64688900E40589 /* ITSNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C7C96442B6469BE00E40589 /* ITSNetworkEndpointGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */; };
 		5C7C96462B6469DF00E40589 /* ITSNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */; };
+		5C7C96492B646B1100E40589 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7C96482B646B1100E40589 /* Moya */; };
+		5C7C964B2B646EF100E40589 /* ITSNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C964A2B646EF100E40589 /* ITSNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,7 @@
 		5C7C96332B64688900E40589 /* ITSNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkTests.swift; sourceTree = "<group>"; };
 		5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkEndpointGroup.swift; sourceTree = "<group>"; };
 		5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		5C7C964A2B646EF100E40589 /* ITSNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C96492B646B1100E40589 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +269,7 @@
 				5C7C96272B64688900E40589 /* ITSNetwork.h */,
 				5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */,
 				5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */,
+				5C7C964A2B646EF100E40589 /* ITSNetworkService.swift */,
 			);
 			path = ITSNetwork;
 			sourceTree = "<group>";
@@ -360,6 +365,9 @@
 			dependencies = (
 			);
 			name = ITSNetwork;
+			packageProductDependencies = (
+				5C7C96482B646B1100E40589 /* Moya */,
+			);
 			productName = ITSNetwork;
 			productReference = 5C7C96252B64688900E40589 /* ITSNetwork.framework */;
 			productType = "com.apple.product-type.framework";
@@ -423,6 +431,9 @@
 				Base,
 			);
 			mainGroup = 5C7C958F2B64614500E40589;
+			packageReferences = (
+				5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 5C7C95992B64614500E40589 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -519,6 +530,7 @@
 			files = (
 				5C7C96442B6469BE00E40589 /* ITSNetworkEndpointGroup.swift in Sources */,
 				5C7C96462B6469DF00E40589 /* ITSNetworkServiceProtocol.swift in Sources */,
+				5C7C964B2B646EF100E40589 /* ITSNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1014,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C7C96482B646B1100E40589 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C7C95902B64614500E40589 /* Project object */;
 }
