@@ -12,13 +12,13 @@ public protocol ITSNetworkServiceProtocol {
     
     @discardableResult
     func request(
-        endpoint: INNetworkEndpointGroup,
+        endpoint: ITSNetworkEndpointGroup,
         completion: @escaping ((Result<Moya.Response, MoyaError>) -> Void)
     ) -> Cancellable
 
     @discardableResult
     func request<T: Codable>(
-        endpoint: INNetworkEndpointGroup,
+        endpoint: ITSNetworkEndpointGroup,
         completion: @escaping ((Result<T, MoyaError>) -> Void)
     ) -> Cancellable
 }

@@ -33,6 +33,10 @@
 		5C7C96462B6469DF00E40589 /* ITSNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */; };
 		5C7C96492B646B1100E40589 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7C96482B646B1100E40589 /* Moya */; };
 		5C7C964B2B646EF100E40589 /* ITSNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C964A2B646EF100E40589 /* ITSNetworkService.swift */; };
+		5C7C96502B64710400E40589 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7C964F2B64710400E40589 /* Reachability */; };
+		5C7C96522B64712400E40589 /* ITSReachabilityListenerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96512B64712400E40589 /* ITSReachabilityListenerProtocol.swift */; };
+		5C7C96542B64714600E40589 /* ITSReachabilityListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96532B64714600E40589 /* ITSReachabilityListener.swift */; };
+		5C7C96572B6471F000E40589 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96562B6471F000E40589 /* SearchResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,9 @@
 		5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkEndpointGroup.swift; sourceTree = "<group>"; };
 		5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		5C7C964A2B646EF100E40589 /* ITSNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkService.swift; sourceTree = "<group>"; };
+		5C7C96512B64712400E40589 /* ITSReachabilityListenerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSReachabilityListenerProtocol.swift; sourceTree = "<group>"; };
+		5C7C96532B64714600E40589 /* ITSReachabilityListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSReachabilityListener.swift; sourceTree = "<group>"; };
+		5C7C96562B6471F000E40589 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C96492B646B1100E40589 /* Moya in Frameworks */,
+				5C7C96502B64710400E40589 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +275,12 @@
 			isa = PBXGroup;
 			children = (
 				5C7C96272B64688900E40589 /* ITSNetwork.h */,
+				5C7C96552B6471C900E40589 /* Models */,
 				5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */,
 				5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */,
 				5C7C964A2B646EF100E40589 /* ITSNetworkService.swift */,
+				5C7C96512B64712400E40589 /* ITSReachabilityListenerProtocol.swift */,
+				5C7C96532B64714600E40589 /* ITSReachabilityListener.swift */,
 			);
 			path = ITSNetwork;
 			sourceTree = "<group>";
@@ -280,6 +291,14 @@
 				5C7C96332B64688900E40589 /* ITSNetworkTests.swift */,
 			);
 			path = ITSNetworkTests;
+			sourceTree = "<group>";
+		};
+		5C7C96552B6471C900E40589 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96562B6471F000E40589 /* SearchResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +386,7 @@
 			name = ITSNetwork;
 			packageProductDependencies = (
 				5C7C96482B646B1100E40589 /* Moya */,
+				5C7C964F2B64710400E40589 /* Reachability */,
 			);
 			productName = ITSNetwork;
 			productReference = 5C7C96252B64688900E40589 /* ITSNetwork.framework */;
@@ -433,6 +453,7 @@
 			mainGroup = 5C7C958F2B64614500E40589;
 			packageReferences = (
 				5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */,
+				5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			productRefGroup = 5C7C95992B64614500E40589 /* Products */;
 			projectDirPath = "";
@@ -528,9 +549,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C96572B6471F000E40589 /* SearchResponseModel.swift in Sources */,
 				5C7C96442B6469BE00E40589 /* ITSNetworkEndpointGroup.swift in Sources */,
+				5C7C96522B64712400E40589 /* ITSReachabilityListenerProtocol.swift in Sources */,
 				5C7C96462B6469DF00E40589 /* ITSNetworkServiceProtocol.swift in Sources */,
 				5C7C964B2B646EF100E40589 /* ITSNetworkService.swift in Sources */,
+				5C7C96542B64714600E40589 /* ITSReachabilityListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1024,6 +1048,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1031,6 +1063,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		5C7C964F2B64710400E40589 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

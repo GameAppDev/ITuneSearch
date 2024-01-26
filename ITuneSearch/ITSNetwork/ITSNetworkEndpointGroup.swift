@@ -14,10 +14,10 @@ public enum ITSNetworkEndpointGroup {
 
 extension ITSNetworkEndpointGroup: TargetType {
     
-    public var baseUrl: URL? {
+    public var baseURL: URL {
         switch self {
         default:
-            return URL(string: "https://itunes.apple.com")
+            return URL(string: "https://itunes.apple.com")!
         }
     }
 
