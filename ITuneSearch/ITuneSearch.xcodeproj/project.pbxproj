@@ -17,6 +17,13 @@
 		5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95CE2B64627F00E40589 /* AppDelegate+Url.swift */; };
 		5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95D02B64628C00E40589 /* AppDelegate+ATT.swift */; };
 		5C7C95D32B64629A00E40589 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95D22B64629A00E40589 /* AppRouter.swift */; };
+		5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95D82B6463BD00E40589 /* SplashBuilder.swift */; };
+		5C7C95DB2B6463CC00E40589 /* SplashContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95DA2B6463CC00E40589 /* SplashContractor.swift */; };
+		5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95DC2B6463D800E40589 /* SplashRouter.swift */; };
+		5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95DE2B6463E600E40589 /* SplashPresenter.swift */; };
+		5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95E02B6463F300E40589 /* SplashInteractor.swift */; };
+		5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C95E22B64641200E40589 /* SplashViewController.swift */; };
+		5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C95E32B64641200E40589 /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		5C7C95CE2B64627F00E40589 /* AppDelegate+Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Url.swift"; sourceTree = "<group>"; };
 		5C7C95D02B64628C00E40589 /* AppDelegate+ATT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ATT.swift"; sourceTree = "<group>"; };
 		5C7C95D22B64629A00E40589 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		5C7C95D82B6463BD00E40589 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		5C7C95DA2B6463CC00E40589 /* SplashContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContractor.swift; sourceTree = "<group>"; };
+		5C7C95DC2B6463D800E40589 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		5C7C95DE2B6463E600E40589 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		5C7C95E02B6463F300E40589 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		5C7C95E22B64641200E40589 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		5C7C95E32B64641200E40589 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7C95CB2B64623500E40589 /* Application */,
+				5C7C95D52B6463A100E40589 /* Modules */,
 				5C7C95D42B6462ED00E40589 /* SupportingFiles */,
 				5C7C95A92B64614500E40589 /* Info.plist */,
 			);
@@ -144,6 +159,36 @@
 				5C7C95A62B64614500E40589 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5C7C95D52B6463A100E40589 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C95D62B6463AC00E40589 /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5C7C95D62B6463AC00E40589 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C95D72B6463B200E40589 /* Builder */,
+				5C7C95DA2B6463CC00E40589 /* SplashContractor.swift */,
+				5C7C95DC2B6463D800E40589 /* SplashRouter.swift */,
+				5C7C95DE2B6463E600E40589 /* SplashPresenter.swift */,
+				5C7C95E02B6463F300E40589 /* SplashInteractor.swift */,
+				5C7C95E22B64641200E40589 /* SplashViewController.swift */,
+				5C7C95E32B64641200E40589 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		5C7C95D72B6463B200E40589 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C95D82B6463BD00E40589 /* SplashBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
+				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
 				5C7C95A52B64614500E40589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,10 +323,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */,
+				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
+				5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */,
+				5C7C95DB2B6463CC00E40589 /* SplashContractor.swift in Sources */,
 				5C7C959C2B64614500E40589 /* AppDelegate.swift in Sources */,
 				5C7C95D32B64629A00E40589 /* AppRouter.swift in Sources */,
+				5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
+				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
+				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
