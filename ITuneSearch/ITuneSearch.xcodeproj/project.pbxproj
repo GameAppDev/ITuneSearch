@@ -29,6 +29,8 @@
 		5C7C96352B64688900E40589 /* ITSNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C7C96272B64688900E40589 /* ITSNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C7C96382B64688900E40589 /* ITSNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C96252B64688900E40589 /* ITSNetwork.framework */; };
 		5C7C96392B64688900E40589 /* ITSNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C96252B64688900E40589 /* ITSNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C7C96442B6469BE00E40589 /* ITSNetworkEndpointGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */; };
+		5C7C96462B6469DF00E40589 /* ITSNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		5C7C96272B64688900E40589 /* ITSNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITSNetwork.h; sourceTree = "<group>"; };
 		5C7C962C2B64688900E40589 /* ITSNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITSNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7C96332B64688900E40589 /* ITSNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkTests.swift; sourceTree = "<group>"; };
+		5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkEndpointGroup.swift; sourceTree = "<group>"; };
+		5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSNetworkServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				5C7C96272B64688900E40589 /* ITSNetwork.h */,
+				5C7C96432B6469BE00E40589 /* ITSNetworkEndpointGroup.swift */,
+				5C7C96452B6469DF00E40589 /* ITSNetworkServiceProtocol.swift */,
 			);
 			path = ITSNetwork;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 					};
 					5C7C96242B64688900E40589 = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 					5C7C962B2B64688900E40589 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -510,6 +517,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C96442B6469BE00E40589 /* ITSNetworkEndpointGroup.swift in Sources */,
+				5C7C96462B6469DF00E40589 /* ITSNetworkServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +692,7 @@
 		5C7C95C32B64614600E40589 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -715,6 +725,7 @@
 		5C7C95C42B64614600E40589 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -819,6 +830,7 @@
 		5C7C963B2B64688900E40589 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -845,6 +857,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -855,6 +868,7 @@
 		5C7C963C2B64688900E40589 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
