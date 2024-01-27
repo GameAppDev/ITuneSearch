@@ -59,6 +59,14 @@
 		5C7C96A82B651C8800E40589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96AA2B651C8800E40589 /* Localizable.strings */; };
 		5C7C96BF2B6521CF00E40589 /* ITSJailbreakProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96BE2B6521CF00E40589 /* ITSJailbreakProtocol.swift */; };
 		5C7C96C12B65221400E40589 /* ITSJailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96C02B65221400E40589 /* ITSJailbreak.swift */; };
+		5C7C96C52B65249000E40589 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96C42B65249000E40589 /* RootBuilder.swift */; };
+		5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96C62B65249800E40589 /* RootContractor.swift */; };
+		5C7C96C92B65249F00E40589 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96C82B65249F00E40589 /* RootRouter.swift */; };
+		5C7C96CB2B6524A600E40589 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96CA2B6524A600E40589 /* RootPresenter.swift */; };
+		5C7C96CD2B6524B000E40589 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96CC2B6524B000E40589 /* RootInteractor.swift */; };
+		5C7C96D02B6524BB00E40589 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96CE2B6524BB00E40589 /* RootViewController.swift */; };
+		5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96CF2B6524BB00E40589 /* RootViewController.xib */; };
+		5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96D32B65298300E40589 /* TabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +198,14 @@
 		5C7C96AB2B651C8A00E40589 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5C7C96BE2B6521CF00E40589 /* ITSJailbreakProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSJailbreakProtocol.swift; sourceTree = "<group>"; };
 		5C7C96C02B65221400E40589 /* ITSJailbreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSJailbreak.swift; sourceTree = "<group>"; };
+		5C7C96C42B65249000E40589 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		5C7C96C62B65249800E40589 /* RootContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContractor.swift; sourceTree = "<group>"; };
+		5C7C96C82B65249F00E40589 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		5C7C96CA2B6524A600E40589 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		5C7C96CC2B6524B000E40589 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		5C7C96CE2B6524BB00E40589 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		5C7C96CF2B6524BB00E40589 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		5C7C96D32B65298300E40589 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7C95D62B6463AC00E40589 /* Splash */,
+				5C7C96C22B65247E00E40589 /* Root */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -467,6 +484,37 @@
 				5C7C96C02B65221400E40589 /* ITSJailbreak.swift */,
 			);
 			path = Jailbreak;
+			sourceTree = "<group>";
+		};
+		5C7C96C22B65247E00E40589 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96D22B65293F00E40589 /* Entity */,
+				5C7C96C32B65248600E40589 /* Builder */,
+				5C7C96C62B65249800E40589 /* RootContractor.swift */,
+				5C7C96C82B65249F00E40589 /* RootRouter.swift */,
+				5C7C96CA2B6524A600E40589 /* RootPresenter.swift */,
+				5C7C96CC2B6524B000E40589 /* RootInteractor.swift */,
+				5C7C96CE2B6524BB00E40589 /* RootViewController.swift */,
+				5C7C96CF2B6524BB00E40589 /* RootViewController.xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		5C7C96C32B65248600E40589 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96C42B65249000E40589 /* RootBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		5C7C96D22B65293F00E40589 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96D32B65298300E40589 /* TabBarItem.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -704,6 +752,7 @@
 			files = (
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
+				5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */,
 				5C7C95A52B64614500E40589 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,14 +808,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */,
+				5C7C96C92B65249F00E40589 /* RootRouter.swift in Sources */,
+				5C7C96D02B6524BB00E40589 /* RootViewController.swift in Sources */,
 				5C7C965A2B647A9900E40589 /* ITSDependencyContainer.swift in Sources */,
+				5C7C96CD2B6524B000E40589 /* RootInteractor.swift in Sources */,
 				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
+				5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */,
 				5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */,
 				5C7C95DB2B6463CC00E40589 /* SplashContractor.swift in Sources */,
 				5C7C959C2B64614500E40589 /* AppDelegate.swift in Sources */,
 				5C7C95D32B64629A00E40589 /* AppRouter.swift in Sources */,
+				5C7C96CB2B6524A600E40589 /* RootPresenter.swift in Sources */,
+				5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */,
 				5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */,
+				5C7C96C52B65249000E40589 /* RootBuilder.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
