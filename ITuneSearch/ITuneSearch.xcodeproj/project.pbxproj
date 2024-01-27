@@ -85,6 +85,7 @@
 		5C7C970F2B655AD700E40589 /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7C970E2B655AD700E40589 /* Parchment */; };
 		5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97112B655BE500E40589 /* PaginationView.swift */; };
 		5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97142B655C5400E40589 /* PaginationModel.swift */; };
+		5C7C97172B655E0B00E40589 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97162B655E0B00E40589 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,7 @@
 		5C7C970A2B65573900E40589 /* SearchListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListViewController.xib; sourceTree = "<group>"; };
 		5C7C97112B655BE500E40589 /* PaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
 		5C7C97142B655C5400E40589 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
+		5C7C97162B655E0B00E40589 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +504,7 @@
 				5C7C969B2B65140200E40589 /* Int+Ext.swift */,
 				5C7C969D2B65143900E40589 /* String+Ext.swift */,
 				5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */,
+				5C7C97162B655E0B00E40589 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1017,6 +1020,7 @@
 			files = (
 				5C7C96A02B65199E00E40589 /* UINavigationController+Ext.swift in Sources */,
 				5C7C968C2B650C8400E40589 /* ITSImageService.swift in Sources */,
+				5C7C97172B655E0B00E40589 /* UIView+Ext.swift in Sources */,
 				5C7C96BF2B6521CF00E40589 /* ITSJailbreakProtocol.swift in Sources */,
 				5C7C968A2B650C4800E40589 /* ITSImageServiceProtocol.swift in Sources */,
 				5C7C96C12B65221400E40589 /* ITSJailbreak.swift in Sources */,
