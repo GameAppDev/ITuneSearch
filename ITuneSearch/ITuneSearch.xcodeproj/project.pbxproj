@@ -37,6 +37,8 @@
 		5C7C96522B64712400E40589 /* ITSReachabilityListenerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96512B64712400E40589 /* ITSReachabilityListenerProtocol.swift */; };
 		5C7C96542B64714600E40589 /* ITSReachabilityListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96532B64714600E40589 /* ITSReachabilityListener.swift */; };
 		5C7C96572B6471F000E40589 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96562B6471F000E40589 /* SearchResponseModel.swift */; };
+		5C7C965A2B647A9900E40589 /* ITSDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96592B647A9900E40589 /* ITSDependencyContainer.swift */; };
+		5C7C965D2B647B4200E40589 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7C965C2B647B4200E40589 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,7 @@
 		5C7C96512B64712400E40589 /* ITSReachabilityListenerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSReachabilityListenerProtocol.swift; sourceTree = "<group>"; };
 		5C7C96532B64714600E40589 /* ITSReachabilityListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSReachabilityListener.swift; sourceTree = "<group>"; };
 		5C7C96562B6471F000E40589 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
+		5C7C96592B647A9900E40589 /* ITSDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSDependencyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C96382B64688900E40589 /* ITSNetwork.framework in Frameworks */,
+				5C7C965D2B647B4200E40589 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +201,7 @@
 			children = (
 				5C7C95CB2B64623500E40589 /* Application */,
 				5C7C95D52B6463A100E40589 /* Modules */,
+				5C7C96582B647A8200E40589 /* Utils */,
 				5C7C95D42B6462ED00E40589 /* SupportingFiles */,
 				5C7C95A92B64614500E40589 /* Info.plist */,
 			);
@@ -301,6 +306,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5C7C96582B647A8200E40589 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96592B647A9900E40589 /* ITSDependencyContainer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -330,6 +343,9 @@
 				5C7C96372B64688900E40589 /* PBXTargetDependency */,
 			);
 			name = ITuneSearch;
+			packageProductDependencies = (
+				5C7C965C2B647B4200E40589 /* Swinject */,
+			);
 			productName = ITuneSearch;
 			productReference = 5C7C95982B64614500E40589 /* ITuneSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -454,6 +470,7 @@
 			packageReferences = (
 				5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */,
 				5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */,
+				5C7C965B2B647B4200E40589 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 5C7C95992B64614500E40589 /* Products */;
 			projectDirPath = "";
@@ -515,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */,
+				5C7C965A2B647A9900E40589 /* ITSDependencyContainer.swift in Sources */,
 				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
 				5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */,
@@ -1056,6 +1074,14 @@
 				kind = branch;
 			};
 		};
+		5C7C965B2B647B4200E40589 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1068,6 +1094,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		5C7C965C2B647B4200E40589 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7C965B2B647B4200E40589 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
