@@ -68,6 +68,13 @@
 		5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96CF2B6524BB00E40589 /* RootViewController.xib */; };
 		5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96D32B65298300E40589 /* TabBarItem.swift */; };
 		5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96D72B6534A100E40589 /* CustomTabBar.swift */; };
+		5C7C96DD2B654B4C00E40589 /* MoviesSearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96DC2B654B4C00E40589 /* MoviesSearchBuilder.swift */; };
+		5C7C96DF2B654B5400E40589 /* MoviesSearchContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96DE2B654B5400E40589 /* MoviesSearchContractor.swift */; };
+		5C7C96E12B654B5B00E40589 /* MoviesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96E02B654B5B00E40589 /* MoviesSearchRouter.swift */; };
+		5C7C96E32B654B6300E40589 /* MoviesSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96E22B654B6300E40589 /* MoviesSearchPresenter.swift */; };
+		5C7C96E52B654B6F00E40589 /* MoviesSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96E42B654B6F00E40589 /* MoviesSearchInteractor.swift */; };
+		5C7C96E82B654B7800E40589 /* MoviesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96E62B654B7800E40589 /* MoviesSearchViewController.swift */; };
+		5C7C96E92B654B7800E40589 /* MoviesSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96E72B654B7800E40589 /* MoviesSearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +215,13 @@
 		5C7C96CF2B6524BB00E40589 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		5C7C96D32B65298300E40589 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		5C7C96D72B6534A100E40589 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		5C7C96DC2B654B4C00E40589 /* MoviesSearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchBuilder.swift; sourceTree = "<group>"; };
+		5C7C96DE2B654B5400E40589 /* MoviesSearchContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchContractor.swift; sourceTree = "<group>"; };
+		5C7C96E02B654B5B00E40589 /* MoviesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchRouter.swift; sourceTree = "<group>"; };
+		5C7C96E22B654B6300E40589 /* MoviesSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchPresenter.swift; sourceTree = "<group>"; };
+		5C7C96E42B654B6F00E40589 /* MoviesSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchInteractor.swift; sourceTree = "<group>"; };
+		5C7C96E62B654B7800E40589 /* MoviesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchViewController.swift; sourceTree = "<group>"; };
+		5C7C96E72B654B7800E40589 /* MoviesSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesSearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +368,7 @@
 			children = (
 				5C7C95D62B6463AC00E40589 /* Splash */,
 				5C7C96C22B65247E00E40589 /* Root */,
+				5C7C96D92B654B1F00E40589 /* Movies */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -534,6 +549,36 @@
 				5C7C96D72B6534A100E40589 /* CustomTabBar.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		5C7C96D92B654B1F00E40589 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96DA2B654B3000E40589 /* Search */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		5C7C96DA2B654B3000E40589 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96DB2B654B3800E40589 /* Builder */,
+				5C7C96DE2B654B5400E40589 /* MoviesSearchContractor.swift */,
+				5C7C96E02B654B5B00E40589 /* MoviesSearchRouter.swift */,
+				5C7C96E22B654B6300E40589 /* MoviesSearchPresenter.swift */,
+				5C7C96E42B654B6F00E40589 /* MoviesSearchInteractor.swift */,
+				5C7C96E62B654B7800E40589 /* MoviesSearchViewController.swift */,
+				5C7C96E72B654B7800E40589 /* MoviesSearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5C7C96DB2B654B3800E40589 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96DC2B654B4C00E40589 /* MoviesSearchBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -773,6 +818,7 @@
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
 				5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */,
 				5C7C95A52B64614500E40589 /* Assets.xcassets in Resources */,
+				5C7C96E92B654B7800E40589 /* MoviesSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,7 +872,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C96DD2B654B4C00E40589 /* MoviesSearchBuilder.swift in Sources */,
 				5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */,
+				5C7C96E52B654B6F00E40589 /* MoviesSearchInteractor.swift in Sources */,
 				5C7C96C92B65249F00E40589 /* RootRouter.swift in Sources */,
 				5C7C96D02B6524BB00E40589 /* RootViewController.swift in Sources */,
 				5C7C965A2B647A9900E40589 /* ITSDependencyContainer.swift in Sources */,
@@ -842,10 +890,14 @@
 				5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */,
 				5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */,
 				5C7C96C52B65249000E40589 /* RootBuilder.swift in Sources */,
+				5C7C96DF2B654B5400E40589 /* MoviesSearchContractor.swift in Sources */,
 				5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */,
+				5C7C96E12B654B5B00E40589 /* MoviesSearchRouter.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
+				5C7C96E82B654B7800E40589 /* MoviesSearchViewController.swift in Sources */,
+				5C7C96E32B654B6300E40589 /* MoviesSearchPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
