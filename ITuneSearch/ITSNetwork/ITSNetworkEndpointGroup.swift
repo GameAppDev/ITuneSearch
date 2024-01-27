@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 public enum ITSNetworkEndpointGroup {
-    case search
+    case search(text: String, paginationNumber: Int)
 }
 
 extension ITSNetworkEndpointGroup: TargetType {
@@ -24,7 +24,7 @@ extension ITSNetworkEndpointGroup: TargetType {
     public var path: String {
         switch self {
         case .search:
-            return "/search"
+            return "search"
         }
     }
 
@@ -38,10 +38,9 @@ extension ITSNetworkEndpointGroup: TargetType {
     public var task: Task {
         switch self {
         default:
-            return .requestCompositeParameters(
-                bodyParameters: bodyParameters,
-                bodyEncoding: URLEncoding.default,
-                urlParameters: urlParameters
+            return .requestParameters(
+                parameters: bodyParameters,
+                encoding: URLEncoding.default
             )
         }
     }
@@ -58,13 +57,11 @@ extension ITSNetworkEndpointGroup: TargetType {
 
     private var bodyParameters: [String: String] {
         switch self {
-        default: return [:]
-        }
-    }
-    
-    private var urlParameters: [String: String] {
-        switch self {
-        default: return [:]
+        case .search(let text, let paginationNumber):
+            return [
+                "term": text,
+                "limit": "\(paginationNumber)"
+            ]
         }
     }
 }

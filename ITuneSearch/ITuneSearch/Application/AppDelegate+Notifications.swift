@@ -37,8 +37,7 @@ extension AppDelegate {
            let action = notificationData["action"] as? [String: Any],
            let urlString = action["url"] as? String,
            let url = URL(string: urlString) {
-            debugPrint("<--- url: \(url) --->")
-            // TODO: AppRouter.shared.handleUrl(url)
+            AppRouter.shared.handleUrl(url)
         }
     }
     
