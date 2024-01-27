@@ -55,6 +55,8 @@
 		5C7C969C2B65140200E40589 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C969B2B65140200E40589 /* Int+Ext.swift */; };
 		5C7C969E2B65143900E40589 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C969D2B65143900E40589 /* String+Ext.swift */; };
 		5C7C96A02B65199E00E40589 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */; };
+		5C7C96A32B651B2A00E40589 /* ITSLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96A22B651B2A00E40589 /* ITSLocalization.swift */; };
+		5C7C96A82B651C8800E40589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96AA2B651C8800E40589 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +181,11 @@
 		5C7C969B2B65140200E40589 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		5C7C969D2B65143900E40589 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		5C7C96A22B651B2A00E40589 /* ITSLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSLocalization.swift; sourceTree = "<group>"; };
+		5C7C96A42B651BE600E40589 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5C7C96A52B651C3B00E40589 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5C7C96A92B651C8800E40589 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5C7C96AB2B651C8A00E40589 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7C966F2B650BDD00E40589 /* ITSUtils.h */,
+				5C7C96A12B651B0E00E40589 /* Localization */,
 				5C7C96922B650FF000E40589 /* Extensions */,
 				5C7C96882B650C1100E40589 /* ImageService */,
 			);
@@ -436,6 +444,15 @@
 				5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5C7C96A12B651B0E00E40589 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96A22B651B2A00E40589 /* ITSLocalization.swift */,
+				5C7C96AA2B651C8800E40589 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,8 +658,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				tr,
+				en,
 			);
 			mainGroup = 5C7C958F2B64614500E40589;
 			packageReferences = (
@@ -708,6 +726,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C96A82B651C8800E40589 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +810,7 @@
 				5C7C969C2B65140200E40589 /* Int+Ext.swift in Sources */,
 				5C7C969A2B65130F00E40589 /* Array+Ext.swift in Sources */,
 				5C7C96942B65105F00E40589 /* UICollectionView+Ext.swift in Sources */,
+				5C7C96A32B651B2A00E40589 /* ITSLocalization.swift in Sources */,
 				5C7C969E2B65143900E40589 /* String+Ext.swift in Sources */,
 				5C7C96962B6511C500E40589 /* NSObject+Ext.swift in Sources */,
 			);
@@ -854,8 +874,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				5C7C95A72B64614500E40589 /* Base */,
+				5C7C96A42B651BE600E40589 /* tr */,
+				5C7C96A52B651C3B00E40589 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5C7C96AA2B651C8800E40589 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7C96A92B651C8800E40589 /* en */,
+				5C7C96AB2B651C8A00E40589 /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -866,6 +897,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -928,6 +960,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -989,6 +1022,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ITuneSearch/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Permission ATT";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -1022,6 +1056,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ITuneSearch/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Permission ATT";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
