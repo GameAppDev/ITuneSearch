@@ -7,17 +7,15 @@
 
 import Foundation
 
-protocol ISplashPresenterToView: AnyObject { }
+protocol ISplashPresenterToView: IPresenterToView { }
 
-protocol ISplashViewToPresenter: AnyObject {
-    func viewDidAppear()
-}
+protocol ISplashViewToPresenter: IViewToPresenter { }
 
-protocol ISplashPresenterToInteractor: AnyObject { }
+protocol ISplashPresenterToInteractor: IPresenterToInteractor { }
 
-protocol ISplashInteractorToPresenter: AnyObject { }
+protocol ISplashInteractorToPresenter: IInteractorToPresenter { }
 
-protocol ISplashPresenterToRouter: AnyObject {
+protocol ISplashPresenterToRouter: IPresenterToRouter {
     func navigateToRoot()
     func navigateToSearchMain()
 }

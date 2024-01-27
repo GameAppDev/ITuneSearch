@@ -7,20 +7,19 @@
 
 import Foundation
 
-protocol IRootPresenterToView: AnyObject {
+protocol IRootPresenterToView: IPresenterToView {
     func setupTabBar()
     func setTabBarSelectedIndex(_ index: Int)
 }
 
-protocol IRootViewToPresenter: AnyObject {
-    func viewDidLoad()
+protocol IRootViewToPresenter: IViewToPresenter {
     func handleTabBarItemSelection(selectedIndex: Int)
 }
 
-protocol IRootPresenterToInteractor: AnyObject { }
+protocol IRootPresenterToInteractor: IPresenterToInteractor { }
 
-protocol IRootInteractorToPresenter: AnyObject { }
+protocol IRootInteractorToPresenter: IInteractorToPresenter { }
 
-protocol IRootPresenterToRouter: AnyObject {
+protocol IRootPresenterToRouter: IPresenterToRouter {
     func setTabBarRoutes(_ tabBarItems: [TabBarItem])
 }

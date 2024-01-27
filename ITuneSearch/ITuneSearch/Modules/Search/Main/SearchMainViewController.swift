@@ -37,6 +37,6 @@ extension SearchMainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter?.viewDidLoad()
+        presenter?.viewDidLoad?()
     }
 }

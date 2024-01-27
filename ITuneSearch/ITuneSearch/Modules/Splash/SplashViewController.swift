@@ -21,6 +21,6 @@ extension SplashViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        presenter?.viewDidAppear()
+        presenter?.viewDidAppear?()
     }
 }

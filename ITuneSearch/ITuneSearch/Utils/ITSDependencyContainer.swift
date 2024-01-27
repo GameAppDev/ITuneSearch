@@ -46,16 +46,20 @@ public class ITSDependencyContainer {
         }
     }
     
-    public static func getDefaultImageServiceStorage() -> ITSImageStorageProtocol {
-        return shared.container.resolve(ITSImageStorageProtocol.self)!
-    }
-    
     public static func getDefaultNetworkService() -> ITSNetworkServiceProtocol {
         return shared.container.resolve(ITSNetworkServiceProtocol.self)!
     }
     
     public static func getDefaultNetworkListener() -> ITSReachabilityListenerProtocol {
         return shared.container.resolve(ITSReachabilityListenerProtocol.self)!
+    }
+    
+    public static func getDefaultImageServiceStorage() -> ITSImageStorageProtocol {
+        return shared.container.resolve(ITSImageStorageProtocol.self)!
+    }
+    
+    public static func getDefaultImageService() -> ITSImageServiceProtocol {
+        return shared.container.resolve(ITSImageServiceProtocol.self)!
     }
     
     public static func getDefaultJailbreakControl() -> ITSJailbreakProtocol {
