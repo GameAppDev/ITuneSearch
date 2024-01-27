@@ -86,6 +86,11 @@
 		5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97112B655BE500E40589 /* PaginationView.swift */; };
 		5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97142B655C5400E40589 /* PaginationModel.swift */; };
 		5C7C97172B655E0B00E40589 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97162B655E0B00E40589 /* UIView+Ext.swift */; };
+		5C7C971C2B6572D100E40589 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C971A2B6572D100E40589 /* ListCollectionViewCell.swift */; };
+		5C7C971D2B6572D100E40589 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C971B2B6572D100E40589 /* ListCollectionViewCell.xib */; };
+		5C7C971F2B6576A300E40589 /* SearchListCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C971E2B6576A300E40589 /* SearchListCollectionViewAdapter.swift */; };
+		5C7C97222B65772500E40589 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97212B65772500E40589 /* BaseViewController.swift */; };
+		5C7C97242B65775F00E40589 /* BaseContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97232B65775F00E40589 /* BaseContractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +248,11 @@
 		5C7C97112B655BE500E40589 /* PaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
 		5C7C97142B655C5400E40589 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 		5C7C97162B655E0B00E40589 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		5C7C971A2B6572D100E40589 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C7C971B2B6572D100E40589 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		5C7C971E2B6576A300E40589 /* SearchListCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		5C7C97212B65772500E40589 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5C7C97232B65775F00E40589 /* BaseContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,6 +571,7 @@
 		5C7C96D52B65347900E40589 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				5C7C97202B65770C00E40589 /* Base */,
 				5C7C97102B655BD200E40589 /* Pagination */,
 				5C7C96D62B65348700E40589 /* TabBar */,
 			);
@@ -601,6 +612,7 @@
 		5C7C96ED2B6555A300E40589 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				5C7C97182B6572A600E40589 /* Adapter */,
 				5C7C96FE2B65570400E40589 /* Builder */,
 				5C7C97012B65571900E40589 /* SearchListContractor.swift */,
 				5C7C97032B65572000E40589 /* SearchListRouter.swift */,
@@ -643,6 +655,33 @@
 				5C7C97142B655C5400E40589 /* PaginationModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5C7C97182B6572A600E40589 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C97192B6572B400E40589 /* ListCVCell */,
+				5C7C971E2B6576A300E40589 /* SearchListCollectionViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		5C7C97192B6572B400E40589 /* ListCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C971A2B6572D100E40589 /* ListCollectionViewCell.swift */,
+				5C7C971B2B6572D100E40589 /* ListCollectionViewCell.xib */,
+			);
+			path = ListCVCell;
+			sourceTree = "<group>";
+		};
+		5C7C97202B65770C00E40589 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C97212B65772500E40589 /* BaseViewController.swift */,
+				5C7C97232B65775F00E40589 /* BaseContractor.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -881,6 +920,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
+				5C7C971D2B6572D100E40589 /* ListCollectionViewCell.xib in Resources */,
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
 				5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */,
 				5C7C96FD2B6556F700E40589 /* SearchMainViewController.xib in Resources */,
@@ -940,15 +980,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */,
+				5C7C971C2B6572D100E40589 /* ListCollectionViewCell.swift in Sources */,
 				5C7C97062B65572700E40589 /* SearchListPresenter.swift in Sources */,
 				5C7C96C92B65249F00E40589 /* RootRouter.swift in Sources */,
 				5C7C97042B65572000E40589 /* SearchListRouter.swift in Sources */,
+				5C7C97242B65775F00E40589 /* BaseContractor.swift in Sources */,
 				5C7C96D02B6524BB00E40589 /* RootViewController.swift in Sources */,
 				5C7C965A2B647A9900E40589 /* ITSDependencyContainer.swift in Sources */,
 				5C7C96CD2B6524B000E40589 /* RootInteractor.swift in Sources */,
 				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
 				5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */,
+				5C7C97222B65772500E40589 /* BaseViewController.swift in Sources */,
 				5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */,
 				5C7C96F02B6556AE00E40589 /* SearchMainBuilder.swift in Sources */,
 				5C7C96F92B6556EE00E40589 /* SearchMainInteractor.swift in Sources */,
@@ -960,6 +1003,7 @@
 				5C7C96F52B6556D900E40589 /* SearchMainRouter.swift in Sources */,
 				5C7C96CB2B6524A600E40589 /* RootPresenter.swift in Sources */,
 				5C7C96F72B6556E100E40589 /* SearchMainPresenter.swift in Sources */,
+				5C7C971F2B6576A300E40589 /* SearchListCollectionViewAdapter.swift in Sources */,
 				5C7C96FC2B6556F700E40589 /* SearchMainViewController.swift in Sources */,
 				5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */,
 				5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */,
