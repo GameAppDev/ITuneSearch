@@ -5,3 +5,8 @@
   Created by Oguzhan Yalcin on 27.01.2024.
   
 */
+
+"movies" = "Movies";
+"music" = "Music";
+"apps" = "Apps";
+"books" = "Books";

@@ -122,13 +122,7 @@ enum TabBarItem: CaseIterable {
 
     var controller: UIViewController {
         switch self {
-        case .movies:
-            return UIViewController()
-        case .music:
-            return UIViewController()
-        case .apps:
-            return UIViewController()
-        case .books:
+        default:
             return UIViewController()
         }
     }
