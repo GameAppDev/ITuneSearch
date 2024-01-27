@@ -67,6 +67,7 @@
 		5C7C96D02B6524BB00E40589 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96CE2B6524BB00E40589 /* RootViewController.swift */; };
 		5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96CF2B6524BB00E40589 /* RootViewController.xib */; };
 		5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96D32B65298300E40589 /* TabBarItem.swift */; };
+		5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96D72B6534A100E40589 /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +207,7 @@
 		5C7C96CE2B6524BB00E40589 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5C7C96CF2B6524BB00E40589 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		5C7C96D32B65298300E40589 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		5C7C96D72B6534A100E40589 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 				5C7C95CB2B64623500E40589 /* Application */,
 				5C7C95D52B6463A100E40589 /* Modules */,
 				5C7C96582B647A8200E40589 /* Utils */,
+				5C7C96D52B65347900E40589 /* Commons */,
 				5C7C95D42B6462ED00E40589 /* SupportingFiles */,
 				5C7C95A92B64614500E40589 /* Info.plist */,
 			);
@@ -515,6 +518,22 @@
 				5C7C96D32B65298300E40589 /* TabBarItem.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		5C7C96D52B65347900E40589 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96D62B65348700E40589 /* TabBar */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		5C7C96D62B65348700E40589 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96D72B6534A100E40589 /* CustomTabBar.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -823,6 +842,7 @@
 				5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */,
 				5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */,
 				5C7C96C52B65249000E40589 /* RootBuilder.swift in Sources */,
+				5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,

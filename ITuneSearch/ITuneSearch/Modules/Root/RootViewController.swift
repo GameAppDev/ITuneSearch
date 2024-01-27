@@ -17,7 +17,7 @@ extension RootViewController: IRootPresenterToView {
     
     func setupTabBar() {
         delegate = self
-        setValue(UITabBar(frame: tabBar.frame), forKey: "tabBar")
+        setValue(CustomTabBar(frame: tabBar.frame), forKey: "tabBar")
     }
     
     func setTabBarSelectedIndex(_ index: Int) {
