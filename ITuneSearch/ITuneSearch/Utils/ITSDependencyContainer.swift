@@ -30,15 +30,19 @@ public class ITSDependencyContainer {
             ITSReachabilityListener()
         }.inObjectScope(.container)
         
-        container.register(ITSImageStorageProtocol.self) { r in
+        container.register(ITSImageStorageProtocol.self) { _ in
             ITSImageStorageURLCache(
                 fileCapacity: 512 * 1024 * 1024,
                 memoryCapacity: 24 * 1024 * 1024
             )
         }.inObjectScope(.container)
 
-        container.register(ITSImageServiceProtocol.self) { r in
+        container.register(ITSImageServiceProtocol.self) { _ in
             ITSImageService(cache: Self.getDefaultImageServiceStorage())
+        }
+        
+        container.register(ITSJailbreakProtocol.self) { _ in
+            ITSJailbreak()
         }
     }
     
@@ -52,5 +56,9 @@ public class ITSDependencyContainer {
     
     public static func getDefaultNetworkListener() -> ITSReachabilityListenerProtocol {
         return shared.container.resolve(ITSReachabilityListenerProtocol.self)!
+    }
+    
+    public static func getDefaultJailbreakControl() -> ITSJailbreakProtocol {
+        return shared.container.resolve(ITSJailbreakProtocol.self)!
     }
 }
