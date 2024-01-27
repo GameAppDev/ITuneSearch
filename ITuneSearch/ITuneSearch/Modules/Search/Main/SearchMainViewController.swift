@@ -9,11 +9,34 @@ import UIKit
 
 final class SearchMainViewController: UIViewController {
 
+    // MARK: Outlets
+    @IBOutlet private weak var itemPaginationView: PaginationView!
+    
     // MARK: Properties
     var presenter: ISearchMainViewToPresenter?
 }
 
-extension SearchMainViewController: ISearchMainPresenterToView { }
+extension SearchMainViewController: ISearchMainPresenterToView {
+    
+    func setupPaginationView(dataList: [PaginationModel]) {
+        itemPaginationView.dataList = dataList
+    }
+    
+    func setPaginationView(index: Int) {
+        itemPaginationView.selectedIndex = index
+    }
+    
+    func setPaginationView(isHidden: Bool) {
+        itemPaginationView.isHidden = isHidden
+    }
+}
 
 // MARK: Lifecycle
-extension SearchMainViewController { }
+extension SearchMainViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        presenter?.viewDidLoad()
+    }
+}

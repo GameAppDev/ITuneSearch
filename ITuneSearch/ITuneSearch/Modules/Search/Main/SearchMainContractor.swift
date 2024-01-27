@@ -8,12 +8,19 @@
 import Foundation
 import ITSNetwork
 
-protocol ISearchMainPresenterToView: AnyObject { }
+protocol ISearchMainPresenterToView: AnyObject {
+    func setupPaginationView(dataList: [PaginationModel])
+    func setPaginationView(index: Int)
+    func setPaginationView(isHidden: Bool)
+}
 
-protocol ISearchMainViewToPresenter: AnyObject { }
+protocol ISearchMainViewToPresenter: AnyObject {
+    func viewDidLoad()
+}
 
 protocol ISearchMainPresenterToInteractor: AnyObject {
     func fetchSearch(text: String, paginationNumber: Int)
+    func getPaginationDataList() -> [PaginationModel]
 }
 
 protocol ISearchMainInteractorToPresenter: AnyObject {

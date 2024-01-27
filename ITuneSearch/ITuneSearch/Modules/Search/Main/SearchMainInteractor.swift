@@ -34,4 +34,12 @@ extension SearchMainInteractor: ISearchMainPresenterToInteractor {
             }
         }
     }
+    
+    func getPaginationDataList() -> [PaginationModel] {
+        [.init(vc: SearchListRouter.returnVC(),
+               title: "test1"),
+         .init(vc: SearchListRouter.returnVC(),
+               title: "test2")
+        ]
+    }
 }

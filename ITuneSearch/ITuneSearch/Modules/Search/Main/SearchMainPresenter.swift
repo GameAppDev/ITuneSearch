@@ -22,6 +22,15 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
     
     func viewDidLoad() {
         setupNetworkListener()
+        
+        view?.setPaginationView(isHidden: true)
+        guard let dataList = interactor?.getPaginationDataList()
+        else { return }
+        
+        view?.setupPaginationView(dataList: dataList)
+        view?.setPaginationView(index: 0)
+        view?.setPaginationView(isHidden: false)
+        
         //        if networkListener?.isReachable() ?? false {
         //            interactor?.fetchSearch(text: <#T##String#>, paginationNumber: <#T##Int#>)
         //        }
