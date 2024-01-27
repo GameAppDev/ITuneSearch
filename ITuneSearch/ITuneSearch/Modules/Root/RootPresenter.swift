@@ -15,6 +15,18 @@ final class RootPresenter {
     var router: IRootPresenterToRouter?
 }
 
-extension RootPresenter: IRootViewToPresenter { }
+extension RootPresenter: IRootViewToPresenter {
+    
+    func viewDidLoad() {
+        router?.setTabBarRoutes(TabBarItem.allCases)
+        view?.setupTabBar()
+        view?.setTabBarSelectedIndex(0)
+    }
+    
+    func handleTabBarItemSelection(selectedIndex: Int) {
+        let selectedTabItem = TabBarItem.allCases.first(where: { $0.index == selectedIndex })
+        debugPrint("<--- TabBar Item: \(selectedTabItem?.title ?? selectedIndex.toString()) --->")
+    }
+}
 
 extension RootPresenter: IRootInteractorToPresenter { }

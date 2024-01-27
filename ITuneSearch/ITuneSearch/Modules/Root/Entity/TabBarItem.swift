@@ -37,29 +37,99 @@ enum TabBarItem: CaseIterable {
         case .movies:
             return .init(
                 systemName: "movieclapper",
-                withConfiguration: UIImage.SymbolConfiguration(pointSize: .init(20),
-                                                               weight: .bold,
-                                                               scale: .large)
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .medium,
+                    scale: .large
+                )
             )
-        case .music: return "Music"
-        case .apps: return "Apps"
-        case .books: return "Books"
+        case .music: 
+            return .init(
+                systemName: "music.note.tv",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .medium,
+                    scale: .large
+                )
+            )
+        case .apps:
+            return .init(
+                systemName: "apps.ipad",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .medium,
+                    scale: .large
+                )
+            )
+        case .books:
+            return .init(
+                systemName: "book",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .medium,
+                    scale: .large
+                )
+            )
+        }
+    }
+    
+    var selectedImage: UIImage? {
+        switch self {
+        case .movies:
+            return .init(
+                systemName: "movieclapper.fill",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .bold,
+                    scale: .large
+                )
+            )
+        case .music:
+            return .init(
+                systemName: "music.note.tv.fill",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .bold,
+                    scale: .large
+                )
+            )
+        case .apps:
+            return .init(
+                systemName: "apps.ipad.landscape",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .bold,
+                    scale: .large
+                )
+            )
+        case .books:
+            return .init(
+                systemName: "book.fill",
+                withConfiguration: UIImage.SymbolConfiguration(
+                    pointSize: .init(14),
+                    weight: .bold,
+                    scale: .large
+                )
+            )
         }
     }
 
     var isEnabled: Bool {
         switch self {
-        case .foods: return true
-        case .recipes: return true
+        default: return true
         }
     }
 
     var controller: UIViewController {
         switch self {
-        case .foods:
-            return SearchWithNameRouter.returnVC()
-        case .recipes:
-            return SearchWithNameRouter.returnVC()
+        case .movies:
+            return UIViewController()
+        case .music:
+            return UIViewController()
+        case .apps:
+            return UIViewController()
+        case .books:
+            return UIViewController()
         }
     }
 }

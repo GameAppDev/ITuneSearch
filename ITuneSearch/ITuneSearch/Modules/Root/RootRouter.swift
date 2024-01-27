@@ -18,4 +18,20 @@ final class RootRouter {
     }
 }
 
-extension RootRouter: IRootPresenterToRouter { }
+extension RootRouter: IRootPresenterToRouter {
+    
+    func setTabBarRoutes(_ tabBarItems: [TabBarItem]) {
+        guard let view,
+              let rootVC = view as? RootViewController
+        else { return }
+        
+        rootVC.viewControllers = tabBarItems.map {
+            let controller = UINavigationController(rootViewController: $0.controller)
+            controller.tabBarItem = UITabBarItem(title: $0.title,
+                                                 image: $0.image,
+                                                 selectedImage: $0.selectedImage)
+            controller.tabBarItem.isEnabled = $0.isEnabled
+            return controller
+        }
+    }
+}

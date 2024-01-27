@@ -17,10 +17,10 @@ extension RootViewController: IRootPresenterToView {
     
     func setupTabBar() {
         delegate = self
-        setValue(UITabBar(frame: tabBar.frame))
+        setValue(UITabBar(frame: tabBar.frame), forKey: "tabBar")
     }
     
-    func setTabBarController(index: Int) {
+    func setTabBarSelectedIndex(_ index: Int) {
         selectedIndex = index
     }
 }
@@ -31,9 +31,18 @@ extension RootViewController: UITabBarControllerDelegate {
         _ tabBarController: UITabBarController,
         didSelect viewController: UIViewController
     ) {
-        presenter?.handleTabBarSelection(selectedIndex: tabBarController.selectedIndex)
+        presenter?.handleTabBarItemSelection(
+            selectedIndex: tabBarController.selectedIndex
+        )
     }
 }
 
 // MARK: Lifecycle
-extension RootViewController { }
+extension RootViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        presenter?.viewDidLoad()
+    }
+}
