@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class SearchListInteractor {
+    
+    // MARK: Properties
+    weak var presenter: ISearchListInteractorToPresenter?
+}
+
+extension SearchListInteractor: ISearchListPresenterToInteractor { }

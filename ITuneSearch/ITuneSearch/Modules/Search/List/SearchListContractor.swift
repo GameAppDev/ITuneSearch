@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol ISearchListPresenterToView: AnyObject { }
+
+protocol ISearchListViewToPresenter: AnyObject {
+    func viewDidLoad()
+}
+
+protocol ISearchListPresenterToInteractor: AnyObject { }
+
+protocol ISearchListInteractorToPresenter: AnyObject { }
+
+protocol ISearchListPresenterToRouter: AnyObject { }
