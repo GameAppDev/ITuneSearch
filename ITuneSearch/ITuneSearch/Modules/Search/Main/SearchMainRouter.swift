@@ -15,7 +15,7 @@ final class SearchMainRouter {
     
     // MARK: Static Method
     static func returnVC() -> UIViewController {
-        return SearchMainRouter.buildModule()
+        return SearchMainBuilder.buildModule()
     }
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct SearchMainRouter {
+struct SearchMainBuilder {
 
     static func buildModule() -> UIViewController {
         let router = SearchMainRouter()
