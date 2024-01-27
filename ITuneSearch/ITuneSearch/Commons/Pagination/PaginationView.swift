@@ -8,7 +8,8 @@
 import UIKit
 import Parchment
 
-@IBDesignable final class PaginationView: UIView {
+@IBDesignable
+final class PaginationView: UIView {
     
     private var pagingViewController: PagingViewController?
     
@@ -35,10 +36,10 @@ import Parchment
             options.menuBackgroundColor = .red
             options.menuPosition = .top
             options.menuInteraction = .scrolling
-            options.menuItemSize = .selfSizing(estimatedWidth: 50, height: 50)
+            options.menuItemSize = .selfSizing(estimatedWidth: 50, height: 40)
             options.font = .boldSystemFont(ofSize: .init(14))
             options.textColor = .white.withAlphaComponent(0.6)
-            options.selectedFont = .boldSystemFont(ofSize: .init(16))
+            options.selectedFont = .boldSystemFont(ofSize: .init(15))
             options.selectedTextColor = .white
             options.borderOptions = .hidden
             options.selectedScrollPosition = .preferCentered
