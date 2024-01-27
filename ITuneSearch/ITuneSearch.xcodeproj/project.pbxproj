@@ -82,6 +82,9 @@
 		5C7C97082B65572F00E40589 /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97072B65572F00E40589 /* SearchListInteractor.swift */; };
 		5C7C970B2B65573900E40589 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97092B65573900E40589 /* SearchListViewController.swift */; };
 		5C7C970C2B65573900E40589 /* SearchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C970A2B65573900E40589 /* SearchListViewController.xib */; };
+		5C7C970F2B655AD700E40589 /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7C970E2B655AD700E40589 /* Parchment */; };
+		5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97112B655BE500E40589 /* PaginationView.swift */; };
+		5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97142B655C5400E40589 /* PaginationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +239,8 @@
 		5C7C97072B65572F00E40589 /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
 		5C7C97092B65573900E40589 /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		5C7C970A2B65573900E40589 /* SearchListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListViewController.xib; sourceTree = "<group>"; };
+		5C7C97112B655BE500E40589 /* PaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
+		5C7C97142B655C5400E40589 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +251,7 @@
 				5C7C96382B64688900E40589 /* ITSNetwork.framework in Frameworks */,
 				5C7C96802B650BDD00E40589 /* ITSUtils.framework in Frameworks */,
 				5C7C965D2B647B4200E40589 /* Swinject in Frameworks */,
+				5C7C970F2B655AD700E40589 /* Parchment in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +558,7 @@
 		5C7C96D52B65347900E40589 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				5C7C97102B655BD200E40589 /* Pagination */,
 				5C7C96D62B65348700E40589 /* TabBar */,
 			);
 			path = Commons;
@@ -618,6 +625,23 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		5C7C97102B655BD200E40589 /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C97132B655C4800E40589 /* Models */,
+				5C7C97112B655BE500E40589 /* PaginationView.swift */,
+			);
+			path = Pagination;
+			sourceTree = "<group>";
+		};
+		5C7C97132B655C4800E40589 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C97142B655C5400E40589 /* PaginationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -658,6 +682,7 @@
 			name = ITuneSearch;
 			packageProductDependencies = (
 				5C7C965C2B647B4200E40589 /* Swinject */,
+				5C7C970E2B655AD700E40589 /* Parchment */,
 			);
 			productName = ITuneSearch;
 			productReference = 5C7C95982B64614500E40589 /* ITuneSearch.app */;
@@ -830,6 +855,7 @@
 				5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */,
 				5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */,
 				5C7C965B2B647B4200E40589 /* XCRemoteSwiftPackageReference "Swinject" */,
+				5C7C970D2B655AD700E40589 /* XCRemoteSwiftPackageReference "Parchment" */,
 			);
 			productRefGroup = 5C7C95992B64614500E40589 /* Products */;
 			projectDirPath = "";
@@ -919,6 +945,7 @@
 				5C7C96CD2B6524B000E40589 /* RootInteractor.swift in Sources */,
 				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
+				5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */,
 				5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */,
 				5C7C96F02B6556AE00E40589 /* SearchMainBuilder.swift in Sources */,
 				5C7C96F92B6556EE00E40589 /* SearchMainInteractor.swift in Sources */,
@@ -938,6 +965,7 @@
 				5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
 				5C7C96F32B6556D200E40589 /* SearchMainContractor.swift in Sources */,
+				5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
 				5C7C970B2B65573900E40589 /* SearchListViewController.swift in Sources */,
@@ -1675,6 +1703,14 @@
 				minimumVersion = 2.8.4;
 			};
 		};
+		5C7C970D2B655AD700E40589 /* XCRemoteSwiftPackageReference "Parchment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rechsteiner/Parchment";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1692,6 +1728,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C7C965B2B647B4200E40589 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		5C7C970E2B655AD700E40589 /* Parchment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7C970D2B655AD700E40589 /* XCRemoteSwiftPackageReference "Parchment" */;
+			productName = Parchment;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
