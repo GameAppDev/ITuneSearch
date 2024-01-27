@@ -19,4 +19,5 @@ protocol ISplashInteractorToPresenter: AnyObject { }
 
 protocol ISplashPresenterToRouter: AnyObject {
     func navigateToRoot()
+    func navigateToSearchMain()
 }

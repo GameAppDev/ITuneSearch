@@ -21,7 +21,7 @@ extension SplashPresenter: ISplashViewToPresenter {
     
     func viewDidAppear() {
         jailbreakControl?.check(canContinue: {
-            self.router?.navigateToRoot()
+            self.router?.navigateToSearchMain()
         })
     }
 }

@@ -26,4 +26,10 @@ extension SplashRouter: ISplashPresenterToRouter {
             RootRouter.returnVC()
         )
     }
+    
+    func navigateToSearchMain() {
+        view?.navigationController?.push(
+            SearchMainRouter.returnVC()
+        )
+    }
 }
