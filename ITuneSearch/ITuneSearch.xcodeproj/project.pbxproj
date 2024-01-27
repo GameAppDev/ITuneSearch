@@ -48,6 +48,13 @@
 		5C7C968C2B650C8400E40589 /* ITSImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C968B2B650C8400E40589 /* ITSImageService.swift */; };
 		5C7C968F2B650CF200E40589 /* ITSImageStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C968E2B650CF200E40589 /* ITSImageStorageProtocol.swift */; };
 		5C7C96912B650D3700E40589 /* ITSImageStorageURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96902B650D3700E40589 /* ITSImageStorageURLCache.swift */; };
+		5C7C96942B65105F00E40589 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96932B65105F00E40589 /* UICollectionView+Ext.swift */; };
+		5C7C96962B6511C500E40589 /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96952B6511C500E40589 /* NSObject+Ext.swift */; };
+		5C7C96982B65122F00E40589 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96972B65122F00E40589 /* DateFormatter+Ext.swift */; };
+		5C7C969A2B65130F00E40589 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96992B65130F00E40589 /* Array+Ext.swift */; };
+		5C7C969C2B65140200E40589 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C969B2B65140200E40589 /* Int+Ext.swift */; };
+		5C7C969E2B65143900E40589 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C969D2B65143900E40589 /* String+Ext.swift */; };
+		5C7C96A02B65199E00E40589 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +172,13 @@
 		5C7C968B2B650C8400E40589 /* ITSImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSImageService.swift; sourceTree = "<group>"; };
 		5C7C968E2B650CF200E40589 /* ITSImageStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSImageStorageProtocol.swift; sourceTree = "<group>"; };
 		5C7C96902B650D3700E40589 /* ITSImageStorageURLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSImageStorageURLCache.swift; sourceTree = "<group>"; };
+		5C7C96932B65105F00E40589 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
+		5C7C96952B6511C500E40589 /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		5C7C96972B65122F00E40589 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		5C7C96992B65130F00E40589 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		5C7C969B2B65140200E40589 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
+		5C7C969D2B65143900E40589 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7C966F2B650BDD00E40589 /* ITSUtils.h */,
+				5C7C96922B650FF000E40589 /* Extensions */,
 				5C7C96882B650C1100E40589 /* ImageService */,
 			);
 			path = ITSUtils;
@@ -407,6 +422,20 @@
 				5C7C96902B650D3700E40589 /* ITSImageStorageURLCache.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		5C7C96922B650FF000E40589 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96932B65105F00E40589 /* UICollectionView+Ext.swift */,
+				5C7C96952B6511C500E40589 /* NSObject+Ext.swift */,
+				5C7C96972B65122F00E40589 /* DateFormatter+Ext.swift */,
+				5C7C96992B65130F00E40589 /* Array+Ext.swift */,
+				5C7C969B2B65140200E40589 /* Int+Ext.swift */,
+				5C7C969D2B65143900E40589 /* String+Ext.swift */,
+				5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -753,10 +782,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C96A02B65199E00E40589 /* UINavigationController+Ext.swift in Sources */,
 				5C7C968C2B650C8400E40589 /* ITSImageService.swift in Sources */,
 				5C7C968A2B650C4800E40589 /* ITSImageServiceProtocol.swift in Sources */,
 				5C7C968F2B650CF200E40589 /* ITSImageStorageProtocol.swift in Sources */,
+				5C7C96982B65122F00E40589 /* DateFormatter+Ext.swift in Sources */,
 				5C7C96912B650D3700E40589 /* ITSImageStorageURLCache.swift in Sources */,
+				5C7C969C2B65140200E40589 /* Int+Ext.swift in Sources */,
+				5C7C969A2B65130F00E40589 /* Array+Ext.swift in Sources */,
+				5C7C96942B65105F00E40589 /* UICollectionView+Ext.swift in Sources */,
+				5C7C969E2B65143900E40589 /* String+Ext.swift in Sources */,
+				5C7C96962B6511C500E40589 /* NSObject+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1211,7 +1247,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1223,10 +1259,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oguzzylcn.ITSUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1246,7 +1285,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1258,9 +1297,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oguzzylcn.ITSUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1273,13 +1315,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oguzzylcn.ITSUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITuneSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ITuneSearch";
 			};
 			name = Debug;
@@ -1291,13 +1336,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oguzzylcn.ITSUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITuneSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ITuneSearch";
 			};
 			name = Release;
