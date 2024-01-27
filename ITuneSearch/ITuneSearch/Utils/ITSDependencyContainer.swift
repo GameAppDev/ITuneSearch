@@ -7,6 +7,7 @@
 
 import Foundation
 import ITSNetwork
+import ITSUtils
 import Swinject
 import Moya
 
@@ -28,6 +29,21 @@ public class ITSDependencyContainer {
         container.register(ITSReachabilityListenerProtocol.self) { _ in
             ITSReachabilityListener()
         }.inObjectScope(.container)
+        
+        container.register(ITSImageStorageProtocol.self) { r in
+            ITSImageStorageURLCache(
+                fileCapacity: 512 * 1024 * 1024,
+                memoryCapacity: 24 * 1024 * 1024
+            )
+        }.inObjectScope(.container)
+
+        container.register(ITSImageServiceProtocol.self) { r in
+            ITSImageService(cache: Self.getDefaultImageServiceStorage())
+        }
+    }
+    
+    public static func getDefaultImageServiceStorage() -> ITSImageStorageProtocol {
+        return shared.container.resolve(ITSImageStorageProtocol.self)!
     }
     
     public static func getDefaultNetworkService() -> ITSNetworkServiceProtocol {
