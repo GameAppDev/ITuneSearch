@@ -39,7 +39,7 @@ final class PaginationView: UIView {
             options.menuItemSize = .selfSizing(estimatedWidth: 50, height: 40)
             options.font = .boldSystemFont(ofSize: .init(14))
             options.textColor = .white.withAlphaComponent(0.6)
-            options.selectedFont = .boldSystemFont(ofSize: .init(15))
+            options.selectedFont = .boldSystemFont(ofSize: .init(14))
             options.selectedTextColor = .white
             options.borderOptions = .hidden
             options.selectedScrollPosition = .preferCentered

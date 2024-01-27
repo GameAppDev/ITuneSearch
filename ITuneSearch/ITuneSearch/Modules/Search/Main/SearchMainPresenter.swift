@@ -16,6 +16,8 @@ final class SearchMainPresenter {
     var interactor: ISearchMainPresenterToInteractor?
     var router: ISearchMainPresenterToRouter?
     var networkListener: ITSReachabilityListenerProtocol?
+    
+    private var paginationNumberForEachRequest: Int { get { return 20 } }
 }
 
 extension SearchMainPresenter: ISearchMainViewToPresenter {
@@ -31,9 +33,12 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
         view?.setPaginationView(index: 0)
         view?.setPaginationView(isHidden: false)
         
-        //        if networkListener?.isReachable() ?? false {
-        //            interactor?.fetchSearch(text: <#T##String#>, paginationNumber: <#T##Int#>)
-        //        }
+        if networkListener?.isReachable() ?? false {
+            interactor?.fetchSearch(
+                text: "harry+potter",
+                paginationNumber: paginationNumberForEachRequest
+            )
+        }
     }
 }
 
@@ -55,7 +60,10 @@ extension SearchMainPresenter {
         if networkListener?.isReachable() ?? false,
            status.connection != .unavailable
            /* TODO: !isAllRequestsCompleted */{
-           // interactor?.fetchSearch()
+            interactor?.fetchSearch(
+                text: "harry+potter",
+                paginationNumber: paginationNumberForEachRequest
+            )
         }
     }
 }

@@ -10,3 +10,7 @@
 "music" = "Music";
 "apps" = "Apps";
 "books" = "Books";
+"audiobook" = "Audiobook";
+"track" = "Track";
+"collection" = "Collection";
+"artist" = "Artist";
