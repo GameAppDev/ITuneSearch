@@ -6,14 +6,26 @@
 //
 
 import UIKit
+import ITSUtils
 
 final class SearchListViewController: UIViewController {
     
+    // MARK: Outlets
+    @IBOutlet private weak var listCollectionView: UICollectionView!
+    
     // MARK: Properties
     var presenter: ISearchListViewToPresenter?
+    var collectionViewAdapter: SearchListCollectionViewAdapter?
 }
 
-extension SearchListViewController: ISearchListPresenterToView { }
+extension SearchListViewController: ISearchListPresenterToView {
+    
+    func setupCollectionView() {
+        listCollectionView.dataSource = collectionViewAdapter
+        listCollectionView.delegate = collectionViewAdapter
+        listCollectionView.registerCell(ListCollectionViewCell.self)
+    }
+}
 
 // MARK: Lifecycle
 extension SearchListViewController {
@@ -21,6 +33,6 @@ extension SearchListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter?.viewDidLoad()
+        presenter?.viewDidLoad?()
     }
 }

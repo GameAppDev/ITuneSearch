@@ -7,14 +7,16 @@
 
 import Foundation
 
-protocol ISearchListPresenterToView: AnyObject { }
-
-protocol ISearchListViewToPresenter: AnyObject {
-    func viewDidLoad()
+protocol ISearchListPresenterToView: IPresenterToView {
+    func setupCollectionView()
 }
 
-protocol ISearchListPresenterToInteractor: AnyObject { }
+protocol ISearchListViewToPresenter: IViewToPresenter { }
 
-protocol ISearchListInteractorToPresenter: AnyObject { }
+protocol ISearchListPresenterToInteractor: IPresenterToInteractor { }
 
-protocol ISearchListPresenterToRouter: AnyObject { }
+protocol ISearchListInteractorToPresenter: IInteractorToPresenter { }
+
+protocol ISearchListPresenterToRouter: IPresenterToRouter { }
+
+protocol ISearchListAdapterToPresenter: IAdapterToPresenter { }

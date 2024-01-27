@@ -17,7 +17,18 @@ final class SearchListPresenter {
 
 extension SearchListPresenter: ISearchListViewToPresenter {
     
-    func viewDidLoad() { }
+    func viewDidLoad() {
+        view?.setupCollectionView()
+    }
 }
 
 extension SearchListPresenter: ISearchListInteractorToPresenter { }
+
+extension SearchListPresenter: ISearchListAdapterToPresenter {
+    
+    func rowsCount() -> Int? { return nil }
+    
+    func getList() -> [Any]? { return nil}
+    
+    func listItemSelected(index: Int) { }
+}
