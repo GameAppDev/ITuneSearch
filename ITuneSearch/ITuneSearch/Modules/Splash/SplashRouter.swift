@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ITSUtils
 
 final class SplashRouter {
     
@@ -20,5 +21,9 @@ final class SplashRouter {
 
 extension SplashRouter: ISplashPresenterToRouter {
     
-    func navigateToRoot() { }
+    func navigateToRoot() {
+        view?.navigationController?.push(
+            RootRouter.returnVC()
+        )
+    }
 }

@@ -16,4 +16,11 @@ final class SplashViewController: UIViewController {
 extension SplashViewController: ISplashPresenterToView { }
 
 // MARK: Lifecycle
-extension SplashViewController { }
+extension SplashViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        presenter?.viewDidAppear()
+    }
+}

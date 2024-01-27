@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import ITSNetwork
-import Reachability
+import ITSUtils
 
 final class SplashPresenter {
     
@@ -15,42 +14,16 @@ final class SplashPresenter {
     weak var view: ISplashPresenterToView?
     var interactor: ISplashPresenterToInteractor?
     var router: ISplashPresenterToRouter?
-    var networkListener: ITSReachabilityListenerProtocol?
+    var jailbreakControl: ITSJailbreakProtocol?
 }
 
 extension SplashPresenter: ISplashViewToPresenter {
     
-    func viewDidLoad() {
-        setupNetworkListener()
-        if networkListener?.isReachable() ?? false {
-            interactor?.fetchSearch()
-        }
+    func viewDidAppear() {
+        jailbreakControl?.check(canContinue: {
+            self.router?.navigateToRoot()
+        })
     }
 }
 
-extension SplashPresenter: ISplashInteractorToPresenter {
-    
-    func searchFetchedOnSuccess() {
-        router?.navigateToRoot()
-    }
-    
-    func searchFetchedOnError() { }
-    
-    func connectionOnError() { }
-}
-
-// MARK: ReachabilityListener
-extension SplashPresenter {
-    
-    private func setupNetworkListener() {
-        networkListener?.onReachable(onNetworkStatusChange(status:))
-    }
-    
-    private func onNetworkStatusChange(status: Reachability) {
-        if networkListener?.isReachable() ?? false,
-           status.connection != .unavailable
-           /* TODO: !isAllRequestsCompleted */{
-            interactor?.fetchSearch()
-        }
-    }
-}
+extension SplashPresenter: ISplashInteractorToPresenter { }

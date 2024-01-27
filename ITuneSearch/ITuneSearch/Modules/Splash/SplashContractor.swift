@@ -9,16 +9,13 @@ import Foundation
 
 protocol ISplashPresenterToView: AnyObject { }
 
-protocol ISplashViewToPresenter: AnyObject { }
-
-protocol ISplashPresenterToInteractor: AnyObject {
-    func fetchSearch()
+protocol ISplashViewToPresenter: AnyObject {
+    func viewDidAppear()
 }
 
-protocol ISplashInteractorToPresenter: AnyObject {
-    func searchFetchedOnSuccess()
-    func searchFetchedOnError()
-}
+protocol ISplashPresenterToInteractor: AnyObject { }
+
+protocol ISplashInteractorToPresenter: AnyObject { }
 
 protocol ISplashPresenterToRouter: AnyObject {
     func navigateToRoot()
