@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ITSUtils
 
 class BaseViewController: UIViewController {
 
@@ -13,7 +14,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       //resetNavigationBar()
+       resetNavigationBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -25,7 +26,7 @@ class BaseViewController: UIViewController {
     // MARK: Methods
     private func setupViews() {
         DispatchQueue.main.async { [weak self] in
-            view.backgroundColor = .gray
+            self?.view.backgroundColor = .gray
         }
     }
     
@@ -41,7 +42,7 @@ class BaseViewController: UIViewController {
 
         navigationBar.configureView(
             delegate: self,
-            title: title,
+            title: title ?? Bundle.main.appName,
             leftButtonType: leftButton,
             rightButtonType: rightButton
         )

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ITSNetwork
 
 final class SearchListCollectionViewAdapter: NSObject {
 
@@ -35,11 +36,14 @@ extension SearchListCollectionViewAdapter: UICollectionViewDataSource {
         guard let cell = collectionView.dequeue(cell: ListCollectionViewCell.self, indexPath: indexPath)
         else { return UICollectionViewCell() }
         
-        guard let adoptionList = presenter?.getList() as? [AdoptionModel],
-              let adoptionListItem = adoptionList[safe: indexPath.row]
+        guard let searchList = presenter?.getList() as? [SearchResponseResult],
+              let searchItem = searchList[safe: indexPath.row]
         else { return UICollectionViewCell() }
         
-        cell.configureCell(with: adoptionListItem)
+        cell.configureCell(
+            urlString: searchItem.imageUrlString,
+            name: searchItem.name
+        )
         
         return cell
     }

@@ -91,6 +91,11 @@
 		5C7C971F2B6576A300E40589 /* SearchListCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C971E2B6576A300E40589 /* SearchListCollectionViewAdapter.swift */; };
 		5C7C97222B65772500E40589 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97212B65772500E40589 /* BaseViewController.swift */; };
 		5C7C97242B65775F00E40589 /* BaseContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97232B65775F00E40589 /* BaseContractor.swift */; };
+		5C7C97292B657D6000E40589 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97272B657D6000E40589 /* CustomNavigationBar.swift */; };
+		5C7C972A2B657D6000E40589 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C97282B657D6000E40589 /* CustomNavigationBar.xib */; };
+		5C7C972C2B657E1300E40589 /* NavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C972B2B657E1300E40589 /* NavigationBarProtocol.swift */; };
+		5C7C972E2B657E7B00E40589 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C972D2B657E7B00E40589 /* Bundle+Ext.swift */; };
+		5C7C97302B657F3000E40589 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C972F2B657F3000E40589 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +258,11 @@
 		5C7C971E2B6576A300E40589 /* SearchListCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		5C7C97212B65772500E40589 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5C7C97232B65775F00E40589 /* BaseContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContractor.swift; sourceTree = "<group>"; };
+		5C7C97272B657D6000E40589 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		5C7C97282B657D6000E40589 /* CustomNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNavigationBar.xib; sourceTree = "<group>"; };
+		5C7C972B2B657E1300E40589 /* NavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarProtocol.swift; sourceTree = "<group>"; };
+		5C7C972D2B657E7B00E40589 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
+		5C7C972F2B657F3000E40589 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +525,8 @@
 				5C7C969D2B65143900E40589 /* String+Ext.swift */,
 				5C7C969F2B65199E00E40589 /* UINavigationController+Ext.swift */,
 				5C7C97162B655E0B00E40589 /* UIView+Ext.swift */,
+				5C7C972D2B657E7B00E40589 /* Bundle+Ext.swift */,
+				5C7C972F2B657F3000E40589 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -571,6 +583,7 @@
 		5C7C96D52B65347900E40589 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				5C7C97262B657D3E00E40589 /* NavigationBar */,
 				5C7C97202B65770C00E40589 /* Base */,
 				5C7C97102B655BD200E40589 /* Pagination */,
 				5C7C96D62B65348700E40589 /* TabBar */,
@@ -682,6 +695,16 @@
 				5C7C97232B65775F00E40589 /* BaseContractor.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5C7C97262B657D3E00E40589 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C972B2B657E1300E40589 /* NavigationBarProtocol.swift */,
+				5C7C97272B657D6000E40589 /* CustomNavigationBar.swift */,
+				5C7C97282B657D6000E40589 /* CustomNavigationBar.xib */,
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -919,6 +942,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7C972A2B657D6000E40589 /* CustomNavigationBar.xib in Resources */,
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
 				5C7C971D2B6572D100E40589 /* ListCollectionViewCell.xib in Resources */,
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
@@ -997,6 +1021,7 @@
 				5C7C96F92B6556EE00E40589 /* SearchMainInteractor.swift in Sources */,
 				5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */,
 				5C7C95DB2B6463CC00E40589 /* SplashContractor.swift in Sources */,
+				5C7C97292B657D6000E40589 /* CustomNavigationBar.swift in Sources */,
 				5C7C97022B65571900E40589 /* SearchListContractor.swift in Sources */,
 				5C7C959C2B64614500E40589 /* AppDelegate.swift in Sources */,
 				5C7C95D32B64629A00E40589 /* AppRouter.swift in Sources */,
@@ -1015,6 +1040,7 @@
 				5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
+				5C7C972C2B657E1300E40589 /* NavigationBarProtocol.swift in Sources */,
 				5C7C970B2B65573900E40589 /* SearchListViewController.swift in Sources */,
 				5C7C97002B65571100E40589 /* SearchListBuilder.swift in Sources */,
 			);
@@ -1063,6 +1089,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7C96A02B65199E00E40589 /* UINavigationController+Ext.swift in Sources */,
+				5C7C972E2B657E7B00E40589 /* Bundle+Ext.swift in Sources */,
+				5C7C97302B657F3000E40589 /* UIViewController+Ext.swift in Sources */,
 				5C7C968C2B650C8400E40589 /* ITSImageService.swift in Sources */,
 				5C7C97172B655E0B00E40589 /* UIView+Ext.swift in Sources */,
 				5C7C96BF2B6521CF00E40589 /* ITSJailbreakProtocol.swift in Sources */,

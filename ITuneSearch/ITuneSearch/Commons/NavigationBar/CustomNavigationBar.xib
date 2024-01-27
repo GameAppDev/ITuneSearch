@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3mD-py-Ekb" customClass="CustomNavigationBar" customModule="ITuneSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcQ-Fx-o85" userLabel="containerView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dJ-UK-Nek">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="2rE-fA-Yt3"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemTealColor"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="10"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageReference key="image" image="arrowshape.backward.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                            </state>
+                            <connections>
+                                <action selector="leftButtonClicked:" destination="3mD-py-Ekb" eventType="touchUpInside" id="9NC-g5-e8e"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petopia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-zi-gWE">
+                            <rect key="frame" x="48" y="5" width="224" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="G6H-pJ-frQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4h-Tn-icK">
+                            <rect key="frame" x="260" y="0.0" width="60" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Grb-zZ-yot"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemTealColor"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="10"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                            </state>
+                            <connections>
+                                <action selector="rightButtonClicked:" destination="3mD-py-Ekb" eventType="touchUpInside" id="7IR-v9-k6y"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="9dJ-UK-Nek" firstAttribute="leading" secondItem="JcQ-Fx-o85" secondAttribute="leading" id="HNz-Iu-ocZ"/>
+                        <constraint firstAttribute="bottom" secondItem="q4h-Tn-icK" secondAttribute="bottom" id="Yx9-95-pcg"/>
+                        <constraint firstAttribute="trailing" secondItem="q4h-Tn-icK" secondAttribute="trailing" id="ZrP-X8-a0Q"/>
+                        <constraint firstItem="9dJ-UK-Nek" firstAttribute="top" secondItem="JcQ-Fx-o85" secondAttribute="top" id="aa8-Xm-fH0"/>
+                        <constraint firstAttribute="bottom" secondItem="Vtl-zi-gWE" secondAttribute="bottom" id="bcb-9j-mbv"/>
+                        <constraint firstItem="q4h-Tn-icK" firstAttribute="leading" secondItem="Vtl-zi-gWE" secondAttribute="trailing" constant="-12" id="gMh-Cj-AdF"/>
+                        <constraint firstAttribute="bottom" secondItem="9dJ-UK-Nek" secondAttribute="bottom" id="j5W-lo-W4g"/>
+                        <constraint firstItem="q4h-Tn-icK" firstAttribute="top" secondItem="JcQ-Fx-o85" secondAttribute="top" id="jYv-Xk-c0t"/>
+                        <constraint firstItem="Vtl-zi-gWE" firstAttribute="leading" secondItem="9dJ-UK-Nek" secondAttribute="trailing" constant="-12" id="pC1-Ic-kvk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="JcQ-Fx-o85" firstAttribute="leading" secondItem="3mD-py-Ekb" secondAttribute="leading" id="2lI-eg-dGv"/>
+                <constraint firstItem="JcQ-Fx-o85" firstAttribute="bottom" secondItem="3mD-py-Ekb" secondAttribute="bottom" id="55l-Xt-Jg4"/>
+                <constraint firstItem="JcQ-Fx-o85" firstAttribute="top" secondItem="3mD-py-Ekb" secondAttribute="top" id="Ahh-oH-COH"/>
+                <constraint firstItem="JcQ-Fx-o85" firstAttribute="trailing" secondItem="3mD-py-Ekb" secondAttribute="trailing" id="WLm-Tp-ahR"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="JcQ-Fx-o85" id="YFC-q6-iYk"/>
+                <outlet property="leftButton" destination="9dJ-UK-Nek" id="57o-6g-Fc5"/>
+                <outlet property="rightButton" destination="q4h-Tn-icK" id="s3S-Yf-ZfG"/>
+                <outlet property="titleLabel" destination="Vtl-zi-gWE" id="J9p-Rd-tNQ"/>
+            </connections>
+            <point key="canvasLocation" x="180" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

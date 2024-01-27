@@ -8,7 +8,7 @@
 import UIKit
 import ITSUtils
 
-final class SearchListViewController: UIViewController {
+final class SearchListViewController: BaseViewController {
     
     // MARK: Outlets
     @IBOutlet private weak var listCollectionView: UICollectionView!

@@ -6,6 +6,7 @@
   
 */
 
+"app_name" = "iTuneSearch";
 "movies" = "Movies";
 "music" = "Music";
 "apps" = "Apps";
