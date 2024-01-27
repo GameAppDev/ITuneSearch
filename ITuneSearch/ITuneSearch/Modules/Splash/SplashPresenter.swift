@@ -17,7 +17,18 @@ final class SplashPresenter {
 
 extension SplashPresenter: ISplashViewToPresenter {
     
-    func viewDidLoad() { }
+    func viewDidLoad() {
+        interactor?.fetchSearch()
+    }
 }
 
-extension SplashPresenter: ISplashInteractorToPresenter { }
+extension SplashPresenter: ISplashInteractorToPresenter {
+    
+    func searchFetchedOnSuccess() {
+        router?.navigateToRoot()
+    }
+    
+    func searchFetchedOnError() { }
+    
+    func connectionOnError() { }
+}

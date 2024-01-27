@@ -13,7 +13,7 @@ struct SplashBuilder {
         let router = SplashRouter()
         let viewController = SplashViewController()
         let presenter = SplashPresenter()
-        let interactor = SplashInteractor()
+        let interactor = SplashInteractor(networkListener: ITSDependencyContainer.getDefaultNetworkListener())
         
         router.view = viewController
         
@@ -25,6 +25,7 @@ struct SplashBuilder {
         presenter.interactor = interactor
         
         interactor.presenter = presenter
+        interactor.networkService = ITSDependencyContainer.getDefaultNetworkService()
         
         return viewController
     }

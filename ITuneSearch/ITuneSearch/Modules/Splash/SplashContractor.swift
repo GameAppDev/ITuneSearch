@@ -11,9 +11,14 @@ protocol ISplashPresenterToView: AnyObject { }
 
 protocol ISplashViewToPresenter: AnyObject { }
 
-protocol ISplashPresenterToInteractor: AnyObject { }
+protocol ISplashPresenterToInteractor: AnyObject {
+    func fetchSearch()
+}
 
-protocol ISplashInteractorToPresenter: AnyObject { }
+protocol ISplashInteractorToPresenter: AnyObject {
+    func searchFetchedOnSuccess()
+    func searchFetchedOnError()
+}
 
 protocol ISplashPresenterToRouter: AnyObject {
     func navigateToRoot()
