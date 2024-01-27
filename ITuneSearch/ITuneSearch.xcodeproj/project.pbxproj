@@ -75,6 +75,20 @@
 		5C7C96E52B654B6F00E40589 /* MoviesSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96E42B654B6F00E40589 /* MoviesSearchInteractor.swift */; };
 		5C7C96E82B654B7800E40589 /* MoviesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96E62B654B7800E40589 /* MoviesSearchViewController.swift */; };
 		5C7C96E92B654B7800E40589 /* MoviesSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96E72B654B7800E40589 /* MoviesSearchViewController.xib */; };
+		5C7C96F02B6556AE00E40589 /* SearchMainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96EF2B6556AE00E40589 /* SearchMainBuilder.swift */; };
+		5C7C96F32B6556D200E40589 /* SearchMainContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96F22B6556D200E40589 /* SearchMainContractor.swift */; };
+		5C7C96F52B6556D900E40589 /* SearchMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96F42B6556D900E40589 /* SearchMainRouter.swift */; };
+		5C7C96F72B6556E100E40589 /* SearchMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96F62B6556E100E40589 /* SearchMainPresenter.swift */; };
+		5C7C96F92B6556EE00E40589 /* SearchMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96F82B6556EE00E40589 /* SearchMainInteractor.swift */; };
+		5C7C96FC2B6556F700E40589 /* SearchMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96FA2B6556F700E40589 /* SearchMainViewController.swift */; };
+		5C7C96FD2B6556F700E40589 /* SearchMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96FB2B6556F700E40589 /* SearchMainViewController.xib */; };
+		5C7C97002B65571100E40589 /* SearchListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C96FF2B65571100E40589 /* SearchListBuilder.swift */; };
+		5C7C97022B65571900E40589 /* SearchListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97012B65571900E40589 /* SearchListContractor.swift */; };
+		5C7C97042B65572000E40589 /* SearchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97032B65572000E40589 /* SearchListRouter.swift */; };
+		5C7C97062B65572700E40589 /* SearchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97052B65572700E40589 /* SearchListPresenter.swift */; };
+		5C7C97082B65572F00E40589 /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97072B65572F00E40589 /* SearchListInteractor.swift */; };
+		5C7C970B2B65573900E40589 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97092B65573900E40589 /* SearchListViewController.swift */; };
+		5C7C970C2B65573900E40589 /* SearchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C970A2B65573900E40589 /* SearchListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +236,20 @@
 		5C7C96E42B654B6F00E40589 /* MoviesSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchInteractor.swift; sourceTree = "<group>"; };
 		5C7C96E62B654B7800E40589 /* MoviesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchViewController.swift; sourceTree = "<group>"; };
 		5C7C96E72B654B7800E40589 /* MoviesSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesSearchViewController.xib; sourceTree = "<group>"; };
+		5C7C96EF2B6556AE00E40589 /* SearchMainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainBuilder.swift; sourceTree = "<group>"; };
+		5C7C96F22B6556D200E40589 /* SearchMainContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainContractor.swift; sourceTree = "<group>"; };
+		5C7C96F42B6556D900E40589 /* SearchMainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainRouter.swift; sourceTree = "<group>"; };
+		5C7C96F62B6556E100E40589 /* SearchMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainPresenter.swift; sourceTree = "<group>"; };
+		5C7C96F82B6556EE00E40589 /* SearchMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainInteractor.swift; sourceTree = "<group>"; };
+		5C7C96FA2B6556F700E40589 /* SearchMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainViewController.swift; sourceTree = "<group>"; };
+		5C7C96FB2B6556F700E40589 /* SearchMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainViewController.xib; sourceTree = "<group>"; };
+		5C7C96FF2B65571100E40589 /* SearchListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListBuilder.swift; sourceTree = "<group>"; };
+		5C7C97012B65571900E40589 /* SearchListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListContractor.swift; sourceTree = "<group>"; };
+		5C7C97032B65572000E40589 /* SearchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListRouter.swift; sourceTree = "<group>"; };
+		5C7C97052B65572700E40589 /* SearchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListPresenter.swift; sourceTree = "<group>"; };
+		5C7C97072B65572F00E40589 /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
+		5C7C97092B65573900E40589 /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		5C7C970A2B65573900E40589 /* SearchListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +396,7 @@
 			children = (
 				5C7C95D62B6463AC00E40589 /* Splash */,
 				5C7C96C22B65247E00E40589 /* Root */,
+				5C7C96EA2B65555500E40589 /* Search */,
 				5C7C96D92B654B1F00E40589 /* Movies */,
 			);
 			path = Modules;
@@ -577,6 +606,59 @@
 			isa = PBXGroup;
 			children = (
 				5C7C96DC2B654B4C00E40589 /* MoviesSearchBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		5C7C96EA2B65555500E40589 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96EC2B65559B00E40589 /* Main */,
+				5C7C96ED2B6555A300E40589 /* List */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5C7C96EC2B65559B00E40589 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96EE2B6556A100E40589 /* Builder */,
+				5C7C96F22B6556D200E40589 /* SearchMainContractor.swift */,
+				5C7C96F42B6556D900E40589 /* SearchMainRouter.swift */,
+				5C7C96F62B6556E100E40589 /* SearchMainPresenter.swift */,
+				5C7C96F82B6556EE00E40589 /* SearchMainInteractor.swift */,
+				5C7C96FA2B6556F700E40589 /* SearchMainViewController.swift */,
+				5C7C96FB2B6556F700E40589 /* SearchMainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5C7C96ED2B6555A300E40589 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96FE2B65570400E40589 /* Builder */,
+				5C7C97012B65571900E40589 /* SearchListContractor.swift */,
+				5C7C97032B65572000E40589 /* SearchListRouter.swift */,
+				5C7C97052B65572700E40589 /* SearchListPresenter.swift */,
+				5C7C97072B65572F00E40589 /* SearchListInteractor.swift */,
+				5C7C97092B65573900E40589 /* SearchListViewController.swift */,
+				5C7C970A2B65573900E40589 /* SearchListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		5C7C96EE2B6556A100E40589 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96EF2B6556AE00E40589 /* SearchMainBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		5C7C96FE2B65570400E40589 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C96FF2B65571100E40589 /* SearchListBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -817,8 +899,10 @@
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
 				5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */,
+				5C7C96FD2B6556F700E40589 /* SearchMainViewController.xib in Resources */,
 				5C7C95A52B64614500E40589 /* Assets.xcassets in Resources */,
 				5C7C96E92B654B7800E40589 /* MoviesSearchViewController.xib in Resources */,
+				5C7C970C2B65573900E40589 /* SearchListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,28 +958,40 @@
 			files = (
 				5C7C96DD2B654B4C00E40589 /* MoviesSearchBuilder.swift in Sources */,
 				5C7C95D12B64628C00E40589 /* AppDelegate+ATT.swift in Sources */,
+				5C7C97062B65572700E40589 /* SearchListPresenter.swift in Sources */,
 				5C7C96E52B654B6F00E40589 /* MoviesSearchInteractor.swift in Sources */,
 				5C7C96C92B65249F00E40589 /* RootRouter.swift in Sources */,
+				5C7C97042B65572000E40589 /* SearchListRouter.swift in Sources */,
 				5C7C96D02B6524BB00E40589 /* RootViewController.swift in Sources */,
 				5C7C965A2B647A9900E40589 /* ITSDependencyContainer.swift in Sources */,
 				5C7C96CD2B6524B000E40589 /* RootInteractor.swift in Sources */,
 				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
 				5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */,
+				5C7C96F02B6556AE00E40589 /* SearchMainBuilder.swift in Sources */,
+				5C7C96F92B6556EE00E40589 /* SearchMainInteractor.swift in Sources */,
 				5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */,
 				5C7C95DB2B6463CC00E40589 /* SplashContractor.swift in Sources */,
+				5C7C97022B65571900E40589 /* SearchListContractor.swift in Sources */,
 				5C7C959C2B64614500E40589 /* AppDelegate.swift in Sources */,
 				5C7C95D32B64629A00E40589 /* AppRouter.swift in Sources */,
+				5C7C96F52B6556D900E40589 /* SearchMainRouter.swift in Sources */,
 				5C7C96CB2B6524A600E40589 /* RootPresenter.swift in Sources */,
+				5C7C96F72B6556E100E40589 /* SearchMainPresenter.swift in Sources */,
+				5C7C96FC2B6556F700E40589 /* SearchMainViewController.swift in Sources */,
 				5C7C96D42B65298300E40589 /* TabBarItem.swift in Sources */,
 				5C7C95E12B6463F300E40589 /* SplashInteractor.swift in Sources */,
 				5C7C96C52B65249000E40589 /* RootBuilder.swift in Sources */,
+				5C7C97082B65572F00E40589 /* SearchListInteractor.swift in Sources */,
 				5C7C96DF2B654B5400E40589 /* MoviesSearchContractor.swift in Sources */,
 				5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */,
 				5C7C96E12B654B5B00E40589 /* MoviesSearchRouter.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
+				5C7C96F32B6556D200E40589 /* SearchMainContractor.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
+				5C7C970B2B65573900E40589 /* SearchListViewController.swift in Sources */,
+				5C7C97002B65571100E40589 /* SearchListBuilder.swift in Sources */,
 				5C7C96E82B654B7800E40589 /* MoviesSearchViewController.swift in Sources */,
 				5C7C96E32B654B6300E40589 /* MoviesSearchPresenter.swift in Sources */,
 			);
