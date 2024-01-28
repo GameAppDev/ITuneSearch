@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import ITSNetwork
 
 protocol ISearchListPresenterToView: IPresenterToView {
     func setupCollectionView()
+    func reloadCollectionView()
 }
 
 protocol ISearchListViewToPresenter: IViewToPresenter { }
 
-protocol ISearchListPresenterToInteractor: IPresenterToInteractor { }
+protocol ISearchListPresenterToInteractor: IPresenterToInteractor {
+    func getSearchList() -> [SearchResponseResult]?
+    func getSearchListCount() -> Int?
+}
 
 protocol ISearchListInteractorToPresenter: IInteractorToPresenter { }
 

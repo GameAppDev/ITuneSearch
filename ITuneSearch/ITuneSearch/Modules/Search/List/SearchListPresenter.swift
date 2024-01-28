@@ -26,9 +26,13 @@ extension SearchListPresenter: ISearchListInteractorToPresenter { }
 
 extension SearchListPresenter: ISearchListAdapterToPresenter {
     
-    func rowsCount() -> Int? { return nil }
+    func rowsCount() -> Int? {
+        interactor?.getSearchListCount()
+    }
     
-    func getList() -> [Any]? { return nil}
+    func getList() -> [Any]? {
+        interactor?.getSearchList()
+    }
     
     func listItemSelected(index: Int) { }
 }

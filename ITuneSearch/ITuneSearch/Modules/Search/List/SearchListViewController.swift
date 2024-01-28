@@ -25,6 +25,10 @@ extension SearchListViewController: ISearchListPresenterToView {
         listCollectionView.delegate = collectionViewAdapter
         listCollectionView.registerCell(ListCollectionViewCell.self)
     }
+    
+    func reloadCollectionView() {
+        listCollectionView.reloadData()
+    }
 }
 
 // MARK: Lifecycle

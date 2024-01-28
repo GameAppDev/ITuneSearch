@@ -15,18 +15,8 @@ final class ListCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: Properties
-    let imageService: ITSImageServiceProtocol
+    var imageService: ITSImageServiceProtocol?
     var imageDataTask: URLSessionDataTask?
-    
-    // MARK: Init
-    override init(frame: CGRect) {
-        imageService = ITSDependencyContainer.getDefaultImageService()
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: Methods
     override func layoutSubviews() {
@@ -45,13 +35,14 @@ final class ListCollectionViewCell: UICollectionViewCell {
     
     // MARK: Configure
     func configureCell(urlString: String?, name: String?) {
+        imageService = ITSDependencyContainer.getDefaultImageService()
         nameLabel.text = name ?? ""
         
         imageDataTask?.cancel()
         itemImageView.image = UIImage()
         if let urlString,
            let url = URL(string: urlString) {
-            imageDataTask = imageService.getImage(imageURL: url) { [weak self] result in
+            imageDataTask = imageService?.getImage(imageURL: url) { [weak self] result in
                 guard let self else { return }
 
                 switch result {

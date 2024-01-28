@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import ITSNetwork
 
 struct SearchListBuilder {
 
-    static func buildModule() -> UIViewController {
+    static func buildModule(
+        searchList: [SearchResponseResult]?
+    ) -> UIViewController {
         let router = SearchListRouter()
         let viewController = SearchListViewController()
         let presenter = SearchListPresenter()
-        let interactor = SearchListInteractor()
+        let interactor = SearchListInteractor(searchList: searchList)
         let collectionViewAdapter = SearchListCollectionViewAdapter()
         
         router.view = viewController

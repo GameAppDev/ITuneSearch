@@ -20,28 +20,29 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mc-ED-72l">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-ik-oJC">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-ik-oJC">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="228.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6g-wD-xws">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="16" y="28" width="168" height="168"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="k6g-wD-xws" secondAttribute="height" multiplier="1:1" id="6XL-hA-QBd"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{name}" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-OI-YZK">
-                                        <rect key="frame" x="0.0" y="200" width="200" height="50"/>
+                                        <rect key="frame" x="16" y="200" width="168" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
                             </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Vng-ik-oJC" secondAttribute="trailing" id="DHE-z1-bFz"/>
                             <constraint firstItem="Vng-ik-oJC" firstAttribute="leading" secondItem="3mc-ED-72l" secondAttribute="leading" id="QFA-sy-Uml"/>
-                            <constraint firstAttribute="bottom" secondItem="Vng-ik-oJC" secondAttribute="bottom" id="bCR-Qz-avs"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Vng-ik-oJC" secondAttribute="bottom" id="bCR-Qz-avs"/>
                             <constraint firstItem="Vng-ik-oJC" firstAttribute="top" secondItem="3mc-ED-72l" secondAttribute="top" id="u7P-k2-Bi4"/>
                         </constraints>
                     </view>

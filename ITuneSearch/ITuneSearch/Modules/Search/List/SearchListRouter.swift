@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ITSNetwork
 
 final class SearchListRouter {
     
@@ -13,8 +14,10 @@ final class SearchListRouter {
     weak var view: UIViewController?
     
     // MARK: Static Method
-    static func returnVC() -> UIViewController {
-        return SearchListBuilder.buildModule()
+    static func returnVC(
+        searchList: [SearchResponseResult]?
+    ) -> UIViewController {
+        return SearchListBuilder.buildModule(searchList: searchList)
     }
 }
 

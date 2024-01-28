@@ -66,8 +66,8 @@ extension SearchListCollectionViewAdapter: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let width = (UIScreen.main.bounds.width / 2) - 256
-        return CGSize(width: width, height: width + 30)
+        let width = (UIScreen.main.bounds.width / 2)
+        return CGSize(width: width, height: width + 26)
     }
     
     func collectionView(
