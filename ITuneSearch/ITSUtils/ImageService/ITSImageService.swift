@@ -20,7 +20,7 @@ public class ITSImageService: ITSImageServiceProtocol {
         completion: @escaping ((Result<UIImage, Error>) -> Void)
     ) -> URLSessionDataTask? {
         if cache.hasData(for: imageURL) {
-            reloadFromCache(imageURL: imageURL, completion: completion)
+            getFromCache(imageURL: imageURL, completion: completion)
             return nil
         } else {
             return download(imageURL: imageURL, completion: completion)
@@ -51,7 +51,7 @@ extension ITSImageService {
         return dataTask
     }
 
-    private func reloadFromCache(
+    private func getFromCache(
         imageURL: URL,
         completion: @escaping ((Result<UIImage, Error>) -> Void)
     ) {

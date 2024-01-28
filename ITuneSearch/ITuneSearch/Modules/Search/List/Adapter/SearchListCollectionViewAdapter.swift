@@ -33,16 +33,17 @@ extension SearchListCollectionViewAdapter: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeue(cell: ListCollectionViewCell.self, indexPath: indexPath)
+        guard let cell = collectionView.dequeue(cell: ListCollectionViewCell.self,
+                                                indexPath: indexPath)
         else { return UICollectionViewCell() }
         
         guard let searchList = presenter?.getList() as? [SearchResponseResult],
-              let searchItem = searchList[safe: indexPath.row]
+              let listItem = searchList[safe: indexPath.row]
         else { return UICollectionViewCell() }
         
         cell.configureCell(
-            urlString: searchItem.imageUrlString,
-            name: searchItem.name,
+            urlString: listItem.imageUrlString,
+            name: listItem.name,
             imageService: presenter?.getImageServiceProtocol()
         )
         
@@ -68,7 +69,7 @@ extension SearchListCollectionViewAdapter: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         let width = (UIScreen.main.bounds.width / 2)
-        return CGSize(width: width, height: width + 32)
+        return CGSize(width: width, height: (width + 32))
     }
     
     func collectionView(

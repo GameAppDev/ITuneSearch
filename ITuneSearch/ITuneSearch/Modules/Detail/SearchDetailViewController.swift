@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ITSNetwork
 import ITSUtils
 
 final class SearchDetailViewController: BaseViewController {

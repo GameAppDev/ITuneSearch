@@ -28,7 +28,12 @@ extension UIView {
         ).first as? T
     }
     
-    public func setShadow(color: UIColor, opacity: Float, offSet: CGSize, radius: CGFloat) {
+    public func setShadow(
+        color: UIColor,
+        opacity: Float,
+        offSet: CGSize,
+        radius: CGFloat
+    ) {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             layer.masksToBounds = false

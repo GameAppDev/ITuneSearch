@@ -60,7 +60,7 @@ extension ITSNetworkEndpointGroup: TargetType {
         case .search(let text, let paginationNumber):
             return [
                 "term": text,
-                "limit": "\(paginationNumber)"
+                "limit": paginationNumber.toString()
             ]
         }
     }

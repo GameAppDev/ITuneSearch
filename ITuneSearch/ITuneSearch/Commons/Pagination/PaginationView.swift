@@ -63,6 +63,7 @@ final class PaginationView: UIView {
               pagingViewController.view.bottomAnchor.constraint(equalTo: bottomAnchor),
               pagingViewController.view.topAnchor.constraint(equalTo: topAnchor)
             ])
+            
             self.pagingViewController = pagingViewController
         }
     }

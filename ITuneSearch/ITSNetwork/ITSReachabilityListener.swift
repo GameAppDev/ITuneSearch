@@ -17,7 +17,7 @@ public class ITSReachabilityListener: ITSReachabilityListenerProtocol {
             self.reachability = try Reachability()
             try self.reachability?.startNotifier()
         } catch {
-            debugPrint("<--- Cannot initialize network reachability listener. --->")
+            debugPrint("<--- Cannot initialize network reachability listener --->")
         }
     }
 

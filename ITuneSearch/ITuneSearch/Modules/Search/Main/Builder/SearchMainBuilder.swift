@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ITSNetwork
 
 struct SearchMainBuilder {
 

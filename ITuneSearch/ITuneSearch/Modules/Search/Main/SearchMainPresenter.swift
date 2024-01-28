@@ -107,12 +107,8 @@ extension SearchMainPresenter {
     
     private func onNetworkStatusChange(status: Reachability) {
         if networkListener?.isReachable() ?? false,
-           status.connection != .unavailable
-           /* TODO: !isAllRequestsCompleted */{
-            interactor?.fetchSearch(
-                text: "harry+potter",
-                paginationNumber: paginationNumberForEachRequest
-            )
+           status.connection != .unavailable {
+            // TODO: Control !isAllRequestsCompleted
         }
     }
 }

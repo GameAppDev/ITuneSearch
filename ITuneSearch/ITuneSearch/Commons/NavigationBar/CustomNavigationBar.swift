@@ -68,16 +68,7 @@ final class CustomNavigationBar: UIView {
             titleLabel.font = .navbarTitleFont
             titleLabel.textColor = .navbarItemsColour
             
-            leftButton.contentVerticalAlignment = .bottom
-            leftButton.contentHorizontalAlignment = .left
-            leftButton.contentEdgeInsets = .init(top: .zero, left: .init(10),
-                                                 bottom: .init(10), right: .zero)
             leftButton.tintColor = .navbarItemsColour
-            
-            rightButton.contentVerticalAlignment = .bottom
-            rightButton.contentHorizontalAlignment = .right
-            rightButton.contentEdgeInsets = .init(top: .zero, left: .zero,
-                                                  bottom: .init(10), right: .init(10))
             rightButton.tintColor = .navbarItemsColour
         }
     }

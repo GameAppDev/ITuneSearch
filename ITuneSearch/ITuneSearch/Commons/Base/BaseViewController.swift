@@ -26,7 +26,8 @@ class BaseViewController: UIViewController {
     // MARK: Methods
     private func setupViews() {
         DispatchQueue.main.async { [weak self] in
-            self?.view.backgroundColor = .baseViewBGColour
+            guard let self else { return }
+            view.backgroundColor = .baseViewBGColour
         }
     }
     
