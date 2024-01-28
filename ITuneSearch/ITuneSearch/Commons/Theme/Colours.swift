@@ -24,7 +24,9 @@ extension UIColor {
     static let paginationTextColour = UIColor.secondaryColour
     
     // MARK: SearchList
-    static let listItemNameColour = UIColor.primaryColour
+    static let listItemNameColour  = UIColor.primaryColour
+    static let searchBarBGColour   = UIColor.secondaryColour
+    static let searchBarItemColour = UIColor.primaryColour
     
     // MARK: SearchDetail
     static let detailItemNameColour        = UIColor.primaryColour

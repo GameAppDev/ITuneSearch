@@ -17,6 +17,7 @@ extension UIFont {
     
     // MARK: SearchList
     static let listItemNameFont = UIFont(name: "Roboto-Medium", size: CGFloat(14))
+    static let searchBarTextFont = UIFont(name: "Roboto-Medium", size: CGFloat(16))
     
     // MARK: SearchDetail
     static let detailItemNameFont        = UIFont(name: "Roboto-Bold", size: CGFloat(20))

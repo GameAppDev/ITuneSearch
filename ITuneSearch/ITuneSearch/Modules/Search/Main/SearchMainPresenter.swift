@@ -36,7 +36,7 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
         )
     }
     
-    func handleSearchBarSearching(text: String?) {
+    func handleSearchBarSearchClicked(text: String?) {
         guard let text, text != ""
         else { return }
         
@@ -49,6 +49,7 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
             return
         }
         
+        interactor?.removeAllSearchList()
         view?.showIndicatorView()
         interactor?.fetchSearch(
             text: text.toUrlEncodedFormat(),
@@ -62,8 +63,13 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
     func searchFetchedOnSuccess(list: [SearchResponseResult]?) {
         view?.hideIndicatorView()
         
-        guard let list, list.isNotEmpty
-        else { return }
+        guard let list, list.isNotEmpty else {
+            view?.showPopup(
+                identifier: "empty_list_error_id",
+                content: "empty_list_error".localized
+            )
+            return
+        }
         
         interactor?.appendToSearchList(list)
         handlePaginationView()
@@ -74,7 +80,7 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
         view?.hideIndicatorView()
         view?.showPopup(
             identifier: "request_error_id",
-            content: message ?? "error".localized
+            content: message ?? "request_error".localized
         )
     }
 }

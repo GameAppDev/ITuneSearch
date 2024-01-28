@@ -16,6 +16,7 @@
 "collection" = "Koleksiyon";
 "artist" = "Sanatçı";
 "search" = "Arama";
-"error" = "Hata!";
+"request_error" = "Hata!";
 "detail" = "Detay";
 "connection_error" = "Bağlantı Hatası!";
+"empty_list_error" = "Boş Liste";

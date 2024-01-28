@@ -16,6 +16,7 @@
 "collection" = "Collection";
 "artist" = "Artist";
 "search" = "Search";
-"error" = "Error!";
+"request_error" = "Error!";
 "detail" = "Detail";
 "connection_error" = "Connection Error!";
+"empty_list_error" = "Empty List";

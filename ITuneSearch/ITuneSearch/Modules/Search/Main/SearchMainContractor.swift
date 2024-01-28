@@ -20,7 +20,7 @@ protocol ISearchMainPresenterToView: IPresenterToView {
 }
 
 protocol ISearchMainViewToPresenter: IViewToPresenter {
-    func handleSearchBarSearching(text: String?)
+    func handleSearchBarSearchClicked(text: String?)
 }
 
 protocol ISearchMainPresenterToInteractor: IPresenterToInteractor {

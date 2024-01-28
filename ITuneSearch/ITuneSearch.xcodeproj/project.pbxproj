@@ -758,6 +758,8 @@
 			isa = PBXGroup;
 			children = (
 				5C7C97552B65D27600E40589 /* Fonts */,
+				5C7C97732B65D29A00E40589 /* Colours.swift */,
+				5C7C97712B65D29100E40589 /* Fonts.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -766,8 +768,6 @@
 			isa = PBXGroup;
 			children = (
 				5C7C97562B65D27B00E40589 /* Roboto */,
-				5C7C97712B65D29100E40589 /* Fonts.swift */,
-				5C7C97732B65D29A00E40589 /* Colours.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";

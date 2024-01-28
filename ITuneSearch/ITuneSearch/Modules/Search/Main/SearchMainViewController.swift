@@ -32,6 +32,11 @@ extension SearchMainViewController: ISearchMainPresenterToView {
     }
     
     func setupItemSearchBar() {
+        itemSearchBar.backgroundColor = .searchBarBGColour
+        itemSearchBar.searchTextField.textColor = .searchBarItemColour
+        itemSearchBar.searchTextField.tintColor = .searchBarItemColour
+        itemSearchBar.searchTextField.font = .searchBarTextFont
+        itemSearchBar.searchTextField.leftView?.tintColor = .searchBarItemColour
         itemSearchBar.delegate = self
     }
     
@@ -62,7 +67,7 @@ extension SearchMainViewController: UISearchBarDelegate {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        presenter?.handleSearchBarSearching(text: searchBar.text)
+        presenter?.handleSearchBarSearchClicked(text: searchBar.text)
     }
 }
 
