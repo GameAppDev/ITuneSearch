@@ -24,16 +24,7 @@ extension UIColor {
     static let paginationTextColour = UIColor.secondaryColour
     
     // MARK: MenuListItem
-    static let listItemBGColour   = UIColor.secondaryColour
     static let listItemTextColour = UIColor.primaryColour
-    
-    // MARK: Buttons
-    static let primaryButtonBGColour       = UIColor.primaryColour
-    static let primaryButtonBorderColour   = UIColor.secondaryColour
-    static let primaryButtonTitleColour    = UIColor.secondaryColour
-    static let secondaryButtonBGColour     = UIColor.secondaryColour
-    static let secondaryButtonBorderColour = UIColor.primaryColour
-    static let secondaryButtonTitleColour  = UIColor.primaryColour
 }
 
 extension UIColor {

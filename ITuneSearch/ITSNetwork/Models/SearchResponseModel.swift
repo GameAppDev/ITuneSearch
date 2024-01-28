@@ -18,7 +18,7 @@ public struct SearchResponseResult: Codable {
     public let country: String?
     public let imageUrlString: String?
     public let name: String?
-    public let paginationType: String?
+    public let paginationType: SearchResultPaginationType?
     
     enum CodingKeys: String, CodingKey {
         case releaseDate, country
@@ -28,13 +28,13 @@ public struct SearchResponseResult: Codable {
     }
 }
 
-public enum SearchResultPaginationType: String {
+public enum SearchResultPaginationType: String, Codable {
     case audiobook
     case track
     case collection
     case artist
     
-    var name: String {
+    public var name: String {
         switch self {
         case .audiobook: return "audiobook".localized
         case .track: return "track".localized
