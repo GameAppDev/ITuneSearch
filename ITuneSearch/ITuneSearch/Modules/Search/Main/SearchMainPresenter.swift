@@ -18,7 +18,7 @@ final class SearchMainPresenter {
     var router: ISearchMainPresenterToRouter?
     var networkListener: ITSReachabilityListenerProtocol?
     
-    private var paginationNumberForEachRequest: Int { get { return 20 } }
+    private var paginationNumber: Int = 20
 }
 
 extension SearchMainPresenter: ISearchMainViewToPresenter {
@@ -37,7 +37,8 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
     }
     
     func handleSearchBarSearchClicked(text: String?) {
-        guard let text, text != ""
+        guard let text, text != "",
+              let urlEncodedText = text.toUrlEncodedFormat()
         else { return }
         
         view?.dismissSearchBarKeyboard()
@@ -49,18 +50,24 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
             return
         }
         
+        setPaginationNumber(to: 20)
+        interactor?.setSearchedText(urlEncodedText)
         interactor?.removeAllSearchList()
         view?.showIndicatorView()
         interactor?.fetchSearch(
-            text: text.toUrlEncodedFormat(),
-            paginationNumber: paginationNumberForEachRequest
+            text: urlEncodedText,
+            paginationNumber: paginationNumber,
+            isNewSearch: true
         )
     }
 }
 
 extension SearchMainPresenter: ISearchMainInteractorToPresenter {
     
-    func searchFetchedOnSuccess(list: [SearchResponseResult]?) {
+    func searchFetchedOnSuccess(
+        list: [SearchResponseResult]?,
+        isNewSearch: Bool
+    ) {
         view?.hideIndicatorView()
         
         guard let list, list.isNotEmpty else {
@@ -71,9 +78,10 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
             return
         }
         
-        interactor?.appendToSearchList(list)
-        handlePaginationView()
-        // TODO: Handle Reload PaginationViews
+        interactor?.setSearchList(list)
+        if isNewSearch {
+            setupPaginationView()
+        }
     }
     
     func searchFetchedOnError(message: String?) {
@@ -87,16 +95,28 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
 
 extension SearchMainPresenter: ISearchMainProtocol {
     
-    func handleFetchMore() { }
+    func fetchMoreSearch() {
+        guard let searchedText = interactor?.getSearchedText()
+        else { return }
+        
+        setPaginationNumber(to: paginationNumber + 20)
+        view?.showIndicatorView()
+        interactor?.fetchSearch(
+            text: searchedText,
+            paginationNumber: paginationNumber,
+            isNewSearch: false
+        )
+    }
     
     func handleListItemSelection(listItem: SearchResponseResult) {
         router?.navigateToDetail(listItem: listItem)
     }
 }
 
+// MARK: Pagination
 extension SearchMainPresenter {
     
-    private func handlePaginationView() {
+    private func setupPaginationView() {
         view?.setPaginationView(isHidden: true)
         guard let paginationTypes = interactor?.getPaginationTypes(),
               paginationTypes.isNotEmpty
@@ -117,6 +137,10 @@ extension SearchMainPresenter {
         view?.setupPaginationView(dataList: paginationList)
         view?.setPaginationView(index: 0)
         view?.setPaginationView(isHidden: false)
+    }
+    
+    private func setPaginationNumber(to number: Int) {
+        paginationNumber = number
     }
 }
 

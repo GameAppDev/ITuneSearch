@@ -64,6 +64,7 @@ final class PaginationView: UIView {
               pagingViewController.view.topAnchor.constraint(equalTo: topAnchor)
             ])
             
+            self.pagingViewController?.removeContent()
             self.pagingViewController = pagingViewController
         }
     }

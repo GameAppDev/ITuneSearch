@@ -16,18 +16,26 @@ final class SearchMainInteractor {
     var networkService: ITSNetworkServiceProtocol?
     
     private var searchList = [SearchResponseResult]()
+    private var searchedText: String?
 }
 
 extension SearchMainInteractor: ISearchMainPresenterToInteractor {
     
-    func fetchSearch(text: String, paginationNumber: Int) {
+    func fetchSearch(
+        text: String,
+        paginationNumber: Int,
+        isNewSearch: Bool
+    ) {
         networkService?.request(
             endpoint: .search(text: text, paginationNumber: paginationNumber)
         ) { [weak self] (result: Result<SearchResponseModel, MoyaError>) in
             guard let self else { return }
             switch result {
             case .success(let models):
-                presenter?.searchFetchedOnSuccess(list: models.results)
+                presenter?.searchFetchedOnSuccess(
+                    list: models.results,
+                    isNewSearch: isNewSearch
+                )
             case .failure(let error):
                 presenter?.searchFetchedOnError(message: error.errorDescription)
             }
@@ -42,11 +50,19 @@ extension SearchMainInteractor: ISearchMainPresenterToInteractor {
         searchList.removeAll()
     }
     
-    func appendToSearchList(_ list: [SearchResponseResult]) {
-        searchList.append(contentsOf: list)
+    func setSearchList(_ list: [SearchResponseResult]) {
+        searchList = list
     }
     
     func getSearchList(by type: SearchResultPaginationType) -> [SearchResponseResult] {
         return searchList.filter({ $0.paginationType == type })
+    }
+    
+    func setSearchedText(_ text: String) {
+        searchedText = text
+    }
+    
+    func getSearchedText() -> String? {
+        searchedText
     }
 }

@@ -24,15 +24,20 @@ protocol ISearchMainViewToPresenter: IViewToPresenter {
 }
 
 protocol ISearchMainPresenterToInteractor: IPresenterToInteractor {
-    func fetchSearch(text: String, paginationNumber: Int)
+    func fetchSearch(text: String,
+                     paginationNumber: Int,
+                     isNewSearch: Bool)
     func getPaginationTypes() -> [SearchResultPaginationType]?
     func removeAllSearchList()
-    func appendToSearchList(_ list: [SearchResponseResult])
+    func setSearchList(_ list: [SearchResponseResult])
     func getSearchList(by type: SearchResultPaginationType) -> [SearchResponseResult]
+    func setSearchedText(_ text: String)
+    func getSearchedText() -> String?
 }
 
 protocol ISearchMainInteractorToPresenter: IInteractorToPresenter {
-    func searchFetchedOnSuccess(list: [SearchResponseResult]?)
+    func searchFetchedOnSuccess(list: [SearchResponseResult]?,
+                                isNewSearch: Bool)
     func searchFetchedOnError(message: String?)
 }
 
@@ -42,6 +47,6 @@ protocol ISearchMainPresenterToRouter: IPresenterToRouter {
 
 // MARK: Shared
 protocol ISearchMainProtocol: AnyObject {
-    func handleFetchMore()
+    func fetchMoreSearch()
     func handleListItemSelection(listItem: SearchResponseResult)
 }

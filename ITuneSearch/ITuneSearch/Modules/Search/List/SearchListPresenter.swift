@@ -52,6 +52,6 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
     }
     
     func handleScrolledToBottom() {
-        mainDelegate?.handleFetchMore()
+        mainDelegate?.fetchMoreSearch()
     }
 }

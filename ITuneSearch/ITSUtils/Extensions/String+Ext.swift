@@ -21,7 +21,7 @@ extension String {
         return replacingOccurrences(of: targetChar, with: withChar)
     }
     
-    public func toUrlEncodedFormat() -> String {
+    public func toUrlEncodedFormat() -> String? {
         return replacingOccurrences(of: " ", with: "+")
     }
 }
