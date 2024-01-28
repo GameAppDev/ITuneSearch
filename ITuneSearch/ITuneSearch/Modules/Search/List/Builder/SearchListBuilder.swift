@@ -11,7 +11,8 @@ import ITSNetwork
 struct SearchListBuilder {
 
     static func buildModule(
-        searchList: [SearchResponseResult]?
+        searchList: [SearchResponseResult]?,
+        mainDelegate: ISearchMainProtocol?
     ) -> UIViewController {
         let router = SearchListRouter()
         let viewController = SearchListViewController()
@@ -30,6 +31,7 @@ struct SearchListBuilder {
         presenter.view = viewController
         presenter.interactor = interactor
         presenter.imageService = imageService
+        presenter.mainDelegate = mainDelegate
         
         interactor.presenter = presenter
         

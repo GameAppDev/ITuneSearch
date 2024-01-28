@@ -13,7 +13,7 @@ final class SearchListInteractor {
     // MARK: Properties
     weak var presenter: ISearchListInteractorToPresenter?
     
-    var searchList: [SearchResponseResult]?
+    private var searchList: [SearchResponseResult]?
     
     init(searchList: [SearchResponseResult]?) {
         self.searchList = searchList

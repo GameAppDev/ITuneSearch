@@ -15,6 +15,7 @@ final class SearchListPresenter {
     var interactor: ISearchListPresenterToInteractor?
     var router: ISearchListPresenterToRouter?
     var imageService: ITSImageServiceProtocol?
+    var mainDelegate: ISearchMainProtocol?
 }
 
 extension SearchListPresenter: ISearchListViewToPresenter {
@@ -36,7 +37,15 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
         interactor?.getSearchList()
     }
     
-    func listItemSelected(index: Int) { }
+    func listItemSelected(index: Int) {
+        guard let searchList = interactor?.getSearchList(),
+              let listItem = searchList[safe: index]
+        else { return }
+        
+        mainDelegate?.handleListItemSelection(
+            listItem: listItem
+        )
+    }
     
     func getImageServiceProtocol() -> ITSImageServiceProtocol? {
         imageService

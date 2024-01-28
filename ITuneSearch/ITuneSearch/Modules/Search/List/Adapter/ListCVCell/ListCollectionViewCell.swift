@@ -27,8 +27,9 @@ final class ListCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             
-            nameLabel.font = .listItemTextFont
-            nameLabel.textColor = .listItemTextColour
+            itemImageView.roundAllCorners(radius: .init(8))
+            nameLabel.font = .listItemNameFont
+            nameLabel.textColor = .listItemNameColour
         }
     }
     

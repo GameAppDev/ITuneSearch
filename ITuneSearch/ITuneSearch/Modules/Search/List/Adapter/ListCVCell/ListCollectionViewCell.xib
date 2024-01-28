@@ -21,22 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-ik-oJC">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="228.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="244.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6g-wD-xws">
-                                        <rect key="frame" x="16" y="28" width="168" height="168"/>
+                                        <rect key="frame" x="16" y="36" width="168" height="168"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="k6g-wD-xws" secondAttribute="height" multiplier="1:1" id="6XL-hA-QBd"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{name}" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-OI-YZK">
-                                        <rect key="frame" x="16" y="200" width="168" height="20.5"/>
+                                        <rect key="frame" x="16" y="208" width="168" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="16" bottom="16" trailing="16"/>
                             </stackView>
                         </subviews>
                         <constraints>
