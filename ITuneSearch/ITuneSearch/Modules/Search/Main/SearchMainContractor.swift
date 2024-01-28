@@ -21,12 +21,15 @@ protocol ISearchMainViewToPresenter: IViewToPresenter { }
 
 protocol ISearchMainPresenterToInteractor: IPresenterToInteractor {
     func fetchSearch(text: String, paginationNumber: Int)
-    func getPaginationDataList() -> [PaginationModel]
+    func getPaginationTypes() -> [SearchResultPaginationType]?
+    func removeAllSearchList()
+    func appendToSearchList(_ list: [SearchResponseResult])
+    func getSearchList(by type: SearchResultPaginationType) -> [SearchResponseResult]
 }
 
 protocol ISearchMainInteractorToPresenter: IInteractorToPresenter {
-    func searchFetchedOnSuccess()
-    func searchFetchedOnError()
+    func searchFetchedOnSuccess(list: [SearchResponseResult]?)
+    func searchFetchedOnError(message: String?)
 }
 
 protocol ISearchMainPresenterToRouter: IPresenterToRouter {

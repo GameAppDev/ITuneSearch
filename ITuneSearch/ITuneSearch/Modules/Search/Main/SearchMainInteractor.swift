@@ -13,8 +13,9 @@ final class SearchMainInteractor {
     
     // MARK: Properties
     weak var presenter: ISearchMainInteractorToPresenter?
-    
     var networkService: ITSNetworkServiceProtocol?
+    
+    private var searchList = [SearchResponseResult]()
 }
 
 extension SearchMainInteractor: ISearchMainPresenterToInteractor {
@@ -26,20 +27,26 @@ extension SearchMainInteractor: ISearchMainPresenterToInteractor {
             guard let self else { return }
             switch result {
             case .success(let models):
-                debugPrint("123123 1- \(models.results?.count)")
-                presenter?.searchFetchedOnSuccess()
+                presenter?.searchFetchedOnSuccess(list: models.results)
             case .failure(let error):
-                debugPrint("123123 2- \(error.errorDescription)")
-                presenter?.searchFetchedOnError()
+                presenter?.searchFetchedOnError(message: error.errorDescription)
             }
         }
     }
     
-    func getPaginationDataList() -> [PaginationModel] {
-        [.init(vc: SearchListRouter.returnVC(),
-               title: "test1"),
-         .init(vc: SearchListRouter.returnVC(),
-               title: "test2")
-        ]
+    func getPaginationTypes() -> [SearchResultPaginationType]? {
+        return searchList.compactMap({ $0.paginationType }).uniqued()
+    }
+    
+    func removeAllSearchList() {
+        searchList.removeAll()
+    }
+    
+    func appendToSearchList(_ list: [SearchResponseResult]) {
+        searchList.append(contentsOf: list)
+    }
+    
+    func getSearchList(by type: SearchResultPaginationType) -> [SearchResponseResult] {
+        return searchList.filter({ $0.paginationType == type })
     }
 }

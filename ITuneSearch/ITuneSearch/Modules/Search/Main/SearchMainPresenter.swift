@@ -25,17 +25,10 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
     func viewDidLoad() {
         setupNetworkListener()
         
-        view?.setPaginationView(isHidden: true)
-        guard let dataList = interactor?.getPaginationDataList()
-        else { return }
-        
-        view?.setupPaginationView(dataList: dataList)
-        view?.setPaginationView(index: 0)
-        view?.setPaginationView(isHidden: false)
-        
         if networkListener?.isReachable() ?? false {
+            view?.showIndicatorView()
             interactor?.fetchSearch(
-                text: "harry+potter",
+                text: "lana+del+rey",
                 paginationNumber: paginationNumberForEachRequest
             )
         }
@@ -52,9 +45,49 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
 
 extension SearchMainPresenter: ISearchMainInteractorToPresenter {
     
-    func searchFetchedOnSuccess() { }
+    func searchFetchedOnSuccess(list: [SearchResponseResult]?) {
+        view?.hideIndicatorView()
+        
+        guard let list, list.isNotEmpty
+        else { return }
+        
+        interactor?.appendToSearchList(list)
+        handlePaginationView()
+        // TODO: Handle Reload PaginationViews
+    }
     
-    func searchFetchedOnError() { }
+    func searchFetchedOnError(message: String?) {
+        view?.hideIndicatorView()
+        view?.showPopup(
+            identifier: "error_id",
+            content: message ?? "error".localized
+        )
+    }
+}
+
+extension SearchMainPresenter {
+    
+    private func handlePaginationView() {
+        view?.setPaginationView(isHidden: true)
+        guard let paginationTypes = interactor?.getPaginationTypes(),
+              paginationTypes.isNotEmpty
+        else { return }
+        
+        var paginationList = [PaginationModel]()
+        paginationTypes.forEach { type in
+            paginationList.append(
+                .init(
+                    vc: SearchListRouter.returnVC(
+                        searchList: interactor?.getSearchList(by: type)
+                    ),
+                    title: type.name
+                )
+            )
+        }
+        view?.setupPaginationView(dataList: paginationList)
+        view?.setPaginationView(index: 0)
+        view?.setPaginationView(isHidden: false)
+    }
 }
 
 // MARK: ReachabilityListener
