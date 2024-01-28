@@ -12,12 +12,16 @@ protocol ISearchMainPresenterToView: IPresenterToView {
     func setNavigationBar(title: String?,
                           leftButton: CustomNavigationBar.ButtonType?,
                           rightButton: CustomNavigationBar.ButtonType?)
+    func setupItemSearchBar()
+    func dismissSearchBarKeyboard()
     func setupPaginationView(dataList: [PaginationModel])
     func setPaginationView(index: Int)
     func setPaginationView(isHidden: Bool)
 }
 
-protocol ISearchMainViewToPresenter: IViewToPresenter { }
+protocol ISearchMainViewToPresenter: IViewToPresenter {
+    func handleSearchBarSearching(text: String?)
+}
 
 protocol ISearchMainPresenterToInteractor: IPresenterToInteractor {
     func fetchSearch(text: String, paginationNumber: Int)

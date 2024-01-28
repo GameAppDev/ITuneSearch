@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMainViewController" customModule="ITuneSearch" customModuleProvider="target">
             <connections>
                 <outlet property="itemPaginationView" destination="qUT-qD-4vt" id="KSm-eK-Kb3"/>
+                <outlet property="itemSearchBar" destination="hrA-U9-YQb" id="Mc2-3o-rov"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,17 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hrA-U9-YQb">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="UT6-5e-z35"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="8u8-eR-SmF"/>
+                    </connections>
+                </searchBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUT-qD-4vt" customClass="PaginationView" customModule="ITuneSearch" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="qUT-qD-4vt" firstAttribute="top" secondItem="hrA-U9-YQb" secondAttribute="bottom" id="7JZ-ag-HUR"/>
                 <constraint firstAttribute="bottom" secondItem="qUT-qD-4vt" secondAttribute="bottom" id="RUU-aj-t3J"/>
                 <constraint firstItem="qUT-qD-4vt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yqr-OB-7Iu"/>
-                <constraint firstItem="qUT-qD-4vt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="e8J-Ep-cPB"/>
+                <constraint firstItem="hrA-U9-YQb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aca-Dv-WMr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qUT-qD-4vt" secondAttribute="trailing" id="hOi-fT-ODF"/>
+                <constraint firstItem="hrA-U9-YQb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mcq-m5-9Qg"/>
+                <constraint firstItem="hrA-U9-YQb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vOt-sX-PrP"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

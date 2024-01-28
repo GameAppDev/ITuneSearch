@@ -8,6 +8,7 @@
 import Foundation
 import ITSNetwork
 import Reachability
+import ITSUtils
 
 final class SearchMainPresenter {
     
@@ -24,14 +25,7 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
     
     func viewDidLoad() {
         setupNetworkListener()
-        
-        if networkListener?.isReachable() ?? false {
-            view?.showIndicatorView()
-            interactor?.fetchSearch(
-                text: "lana+del+rey",
-                paginationNumber: paginationNumberForEachRequest
-            )
-        }
+        view?.setupItemSearchBar()
     }
     
     func viewWillAppear() {
@@ -39,6 +33,26 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
             title: "search".localized,
             leftButton: nil,
             rightButton: nil
+        )
+    }
+    
+    func handleSearchBarSearching(text: String?) {
+        guard let text, text != ""
+        else { return }
+        
+        view?.dismissSearchBarKeyboard()
+        guard networkListener?.isReachable() ?? false else {
+            view?.showPopup(
+                identifier: "connection_error_id",
+                content: "connection_error".localized
+            )
+            return
+        }
+        
+        view?.showIndicatorView()
+        interactor?.fetchSearch(
+            text: text.toUrlEncodedFormat(),
+            paginationNumber: paginationNumberForEachRequest
         )
     }
 }
@@ -59,7 +73,7 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
     func searchFetchedOnError(message: String?) {
         view?.hideIndicatorView()
         view?.showPopup(
-            identifier: "error_id",
+            identifier: "request_error_id",
             content: message ?? "error".localized
         )
     }

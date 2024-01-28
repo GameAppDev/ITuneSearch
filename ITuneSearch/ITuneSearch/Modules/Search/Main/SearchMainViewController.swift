@@ -10,6 +10,7 @@ import UIKit
 final class SearchMainViewController: BaseViewController {
 
     // MARK: Outlets
+    @IBOutlet private weak var itemSearchBar: UISearchBar!
     @IBOutlet private weak var itemPaginationView: PaginationView!
     
     // MARK: Properties
@@ -30,6 +31,14 @@ extension SearchMainViewController: ISearchMainPresenterToView {
         )
     }
     
+    func setupItemSearchBar() {
+        itemSearchBar.delegate = self
+    }
+    
+    func dismissSearchBarKeyboard() {
+        itemSearchBar.resignFirstResponder()
+    }
+    
     func setupPaginationView(dataList: [PaginationModel]) {
         itemPaginationView.dataList = dataList
     }
@@ -40,6 +49,20 @@ extension SearchMainViewController: ISearchMainPresenterToView {
     
     func setPaginationView(isHidden: Bool) {
         itemPaginationView.isHidden = isHidden
+    }
+}
+
+extension SearchMainViewController: UISearchBarDelegate {
+    
+    func searchBar(
+        _ searchBar: UISearchBar,
+        textDidChange searchText: String
+    ) {
+        debugPrint("<--- searchText: \(searchText) --->")
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter?.handleSearchBarSearching(text: searchBar.text)
     }
 }
 
