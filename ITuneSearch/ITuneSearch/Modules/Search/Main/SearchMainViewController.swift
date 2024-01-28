@@ -55,6 +55,10 @@ extension SearchMainViewController: ISearchMainPresenterToView {
     func setPaginationView(isHidden: Bool) {
         itemPaginationView.isHidden = isHidden
     }
+    
+    func clearPaginationViews() {
+        removeAllChildrenVC()
+    }
 }
 
 extension SearchMainViewController: UISearchBarDelegate {

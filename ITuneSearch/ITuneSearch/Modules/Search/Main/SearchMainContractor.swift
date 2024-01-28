@@ -17,6 +17,7 @@ protocol ISearchMainPresenterToView: IPresenterToView {
     func setupPaginationView(dataList: [PaginationModel])
     func setPaginationView(index: Int)
     func setPaginationView(isHidden: Bool)
+    func clearPaginationViews()
 }
 
 protocol ISearchMainViewToPresenter: IViewToPresenter {

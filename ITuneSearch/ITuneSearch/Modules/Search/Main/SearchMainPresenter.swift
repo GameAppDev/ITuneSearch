@@ -134,6 +134,7 @@ extension SearchMainPresenter {
                 )
             )
         }
+        view?.clearPaginationViews()
         view?.setupPaginationView(dataList: paginationList)
         view?.setPaginationView(index: 0)
         view?.setPaginationView(isHidden: false)
