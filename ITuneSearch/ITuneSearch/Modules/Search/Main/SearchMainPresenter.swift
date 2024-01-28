@@ -79,9 +79,7 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
         }
         
         interactor?.setSearchList(list)
-        if isNewSearch {
-            setupPaginationView()
-        }
+        setupPaginationView()
     }
     
     func searchFetchedOnError(message: String?) {

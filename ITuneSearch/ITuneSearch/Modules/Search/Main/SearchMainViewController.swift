@@ -37,6 +37,13 @@ extension SearchMainViewController: ISearchMainPresenterToView {
         itemSearchBar.searchTextField.tintColor = .searchBarItemColour
         itemSearchBar.searchTextField.font = .searchBarTextFont
         itemSearchBar.searchTextField.leftView?.tintColor = .searchBarItemColour
+        if let clearButton = itemSearchBar.searchTextField.value(forKey: "clearButton") as? UIButton {
+            clearButton.setImage(
+                clearButton.image(for: .normal)?.withRenderingMode(.alwaysTemplate),
+                for: .normal
+            )
+            clearButton.tintColor = .searchBarItemColour
+        }
         itemSearchBar.delegate = self
     }
     
