@@ -33,5 +33,10 @@ protocol ISearchMainInteractorToPresenter: IInteractorToPresenter {
 }
 
 protocol ISearchMainPresenterToRouter: IPresenterToRouter {
-    func navigateToDetail(item: SearchResponseResult)
+    func navigateToDetail(listItem: SearchResponseResult)
+}
+
+// MARK: Shared
+protocol ISearchMainProtocol: AnyObject {
+    func handleListItemSelection(listItem: SearchResponseResult)
 }

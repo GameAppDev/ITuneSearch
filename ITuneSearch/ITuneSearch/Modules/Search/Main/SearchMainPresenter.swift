@@ -65,6 +65,13 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
     }
 }
 
+extension SearchMainPresenter: ISearchMainProtocol {
+    
+    func handleListItemSelection(listItem: SearchResponseResult) {
+        router?.navigateToDetail(listItem: listItem)
+    }
+}
+
 extension SearchMainPresenter {
     
     private func handlePaginationView() {
@@ -78,7 +85,8 @@ extension SearchMainPresenter {
             paginationList.append(
                 .init(
                     vc: SearchListRouter.returnVC(
-                        searchList: interactor?.getSearchList(by: type)
+                        searchList: interactor?.getSearchList(by: type),
+                        mainDelegate: self
                     ),
                     title: type.name
                 )

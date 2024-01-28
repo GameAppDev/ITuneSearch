@@ -15,13 +15,15 @@ final class SearchMainRouter {
     
     // MARK: Static Method
     static func returnVC() -> UIViewController {
-        return SearchMainBuilder.buildModule()
+        SearchMainBuilder.buildModule()
     }
 }
 
 extension SearchMainRouter: ISearchMainPresenterToRouter {
     
-    func navigateToDetail(item: SearchResponseResult) {
-        // TODO: Handle
+    func navigateToDetail(listItem: SearchResponseResult) {
+        view?.navigationController?.push(
+            SearchDetailRouter.returnVC(listItem: listItem)
+        )
     }
 }
