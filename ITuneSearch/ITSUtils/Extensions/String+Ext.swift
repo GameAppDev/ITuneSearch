@@ -20,4 +20,8 @@ extension String {
     public func replace(targetChar: String, withChar: String) -> String {
         return replacingOccurrences(of: targetChar, with: withChar)
     }
+    
+    public func toUrlEncodedFormat() -> String {
+        return replacingOccurrences(of: " ", with: "+")
+    }
 }

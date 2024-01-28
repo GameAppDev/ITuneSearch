@@ -13,7 +13,7 @@ extension UIFont {
     static let navbarTitleFont = UIFont(name: "Roboto-Bold", size: CGFloat(24))
     
     // MARK: Pagination
-    static let paginationTextFont = UIFont(name: "Roboto-Regular", size: CGFloat(16))
+    static let paginationTextFont = UIFont(name: "Roboto-Medium", size: CGFloat(16))
     
     // MARK: SearchList
     static let listItemNameFont = UIFont(name: "Roboto-Medium", size: CGFloat(14))

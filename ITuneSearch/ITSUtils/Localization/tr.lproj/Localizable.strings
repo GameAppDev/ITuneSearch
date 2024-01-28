@@ -18,3 +18,4 @@
 "search" = "Arama";
 "error" = "Hata!";
 "detail" = "Detay";
+"connection_error" = "Bağlantı Hatası!";

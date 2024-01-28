@@ -18,3 +18,4 @@
 "search" = "Search";
 "error" = "Error!";
 "detail" = "Detail";
+"connection_error" = "Connection Error!";
