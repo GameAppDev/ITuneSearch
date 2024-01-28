@@ -42,5 +42,6 @@ protocol ISearchMainPresenterToRouter: IPresenterToRouter {
 
 // MARK: Shared
 protocol ISearchMainProtocol: AnyObject {
+    func handleFetchMore()
     func handleListItemSelection(listItem: SearchResponseResult)
 }

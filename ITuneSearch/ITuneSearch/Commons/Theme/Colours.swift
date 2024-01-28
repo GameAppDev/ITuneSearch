@@ -36,6 +36,6 @@ extension UIColor {
 
 extension UIColor {
     
-    private static let primaryColour   = UIColor(red: 0/255, green: 100/255, blue: 100/255, alpha: 1)
-    private static let secondaryColour = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
+    private static let primaryColour   = UIColor(red: 0/255, green: 90/255, blue: 90/255, alpha: 1)
+    private static let secondaryColour = UIColor(red: 222/255, green: 222/255, blue: 222/255, alpha: 1)
 }

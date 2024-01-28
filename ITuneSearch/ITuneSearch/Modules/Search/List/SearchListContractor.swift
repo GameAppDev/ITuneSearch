@@ -27,4 +27,5 @@ protocol ISearchListPresenterToRouter: IPresenterToRouter { }
 
 protocol ISearchListAdapterToPresenter: IAdapterToPresenter {
     func getImageServiceProtocol() -> ITSImageServiceProtocol?
+    func handleScrolledToBottom()
 }

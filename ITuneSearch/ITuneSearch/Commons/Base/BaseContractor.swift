@@ -58,7 +58,7 @@ protocol IAdapterToPresenter: AnyObject {
     func rowsCount() -> Int?
     func rowsCount(sectionIndex: Int) -> Int?
     func isLastItem(_ index: Int) -> Bool?
-    func getList() -> [Any]?
+    func getListItem(index: Int) -> Any?
     func listItemSelected(index: Int)
 }
 

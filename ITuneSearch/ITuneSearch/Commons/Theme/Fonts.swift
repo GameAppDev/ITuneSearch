@@ -16,7 +16,7 @@ extension UIFont {
     static let paginationTextFont = UIFont(name: "Roboto-Medium", size: CGFloat(16))
     
     // MARK: SearchList
-    static let listItemNameFont = UIFont(name: "Roboto-Medium", size: CGFloat(14))
+    static let listItemNameFont  = UIFont(name: "Roboto-Medium", size: CGFloat(14))
     static let searchBarTextFont = UIFont(name: "Roboto-Medium", size: CGFloat(16))
     
     // MARK: SearchDetail

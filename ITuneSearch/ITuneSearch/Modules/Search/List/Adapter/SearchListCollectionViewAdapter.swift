@@ -37,8 +37,7 @@ extension SearchListCollectionViewAdapter: UICollectionViewDataSource {
                                                 indexPath: indexPath)
         else { return UICollectionViewCell() }
         
-        guard let searchList = presenter?.getList() as? [SearchResponseResult],
-              let listItem = searchList[safe: indexPath.row]
+        guard let listItem = presenter?.getListItem(index: indexPath.row) as? SearchResponseResult
         else { return UICollectionViewCell() }
         
         cell.configureCell(
@@ -58,6 +57,18 @@ extension SearchListCollectionViewAdapter: UICollectionViewDelegate {
         didSelectItemAt indexPath: IndexPath
     ) {
         presenter?.listItemSelected(index: indexPath.row)
+    }
+    
+    func scrollViewDidEndDragging(
+        _ scrollView: UIScrollView,
+        willDecelerate decelerate: Bool
+    ) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if (maximumOffset - currentOffset) <= -150.0 {
+            presenter?.handleScrolledToBottom()
+        }
     }
 }
 

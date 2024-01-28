@@ -87,6 +87,8 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
 
 extension SearchMainPresenter: ISearchMainProtocol {
     
+    func handleFetchMore() { }
+    
     func handleListItemSelection(listItem: SearchResponseResult) {
         router?.navigateToDetail(listItem: listItem)
     }

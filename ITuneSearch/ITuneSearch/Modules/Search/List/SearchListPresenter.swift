@@ -33,8 +33,8 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
         interactor?.getSearchListCount()
     }
     
-    func getList() -> [Any]? {
-        interactor?.getSearchList()
+    func getListItem(index: Int) -> Any? {
+        interactor?.getSearchList()?[safe: index]
     }
     
     func listItemSelected(index: Int) {
@@ -49,5 +49,9 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
     
     func getImageServiceProtocol() -> ITSImageServiceProtocol? {
         imageService
+    }
+    
+    func handleScrolledToBottom() {
+        mainDelegate?.handleFetchMore()
     }
 }
