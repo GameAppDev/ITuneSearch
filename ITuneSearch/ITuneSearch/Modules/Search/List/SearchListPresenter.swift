@@ -20,6 +20,14 @@ extension SearchListPresenter: ISearchListViewToPresenter {
     func viewDidLoad() {
         view?.setupCollectionView()
     }
+    
+    func viewWillAppear() {
+        view?.setNavigationBar(
+            title: "asdada",
+            leftButton: nil,
+            rightButton: nil
+        )
+    }
 }
 
 extension SearchListPresenter: ISearchListInteractorToPresenter { }

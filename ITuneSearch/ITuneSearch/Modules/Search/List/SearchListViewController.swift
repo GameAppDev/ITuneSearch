@@ -20,6 +20,18 @@ final class SearchListViewController: BaseViewController {
 
 extension SearchListViewController: ISearchListPresenterToView {
     
+    func setNavigationBar(
+        title: String?,
+        leftButton: CustomNavigationBar.ButtonType?,
+        rightButton: CustomNavigationBar.ButtonType?
+    ) {
+        setNavigationBarItems(
+            title: title,
+            leftButton: leftButton,
+            rightButton: rightButton
+        )
+    }
+    
     func setupCollectionView() {
         listCollectionView.dataSource = collectionViewAdapter
         listCollectionView.delegate = collectionViewAdapter
@@ -34,5 +46,11 @@ extension SearchListViewController {
         super.viewDidLoad()
         
         presenter?.viewDidLoad?()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter?.viewWillAppear?()
     }
 }

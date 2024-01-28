@@ -27,4 +27,18 @@ extension UIView {
             options: nil
         ).first as? T
     }
+    
+    public func setShadow(color: UIColor, opacity: Float, offSet: CGSize, radius: CGFloat) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            layer.masksToBounds = false
+            layer.shadowColor = color.cgColor
+            layer.shadowOpacity = opacity
+            layer.shadowOffset = offSet
+            layer.shadowRadius = radius
+            layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+            layer.shouldRasterize = true
+            layer.rasterizationScale = UIScreen.main.scale
+        }
+    }
 }

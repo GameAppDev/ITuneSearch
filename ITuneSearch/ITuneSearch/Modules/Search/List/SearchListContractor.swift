@@ -8,6 +8,9 @@
 import Foundation
 
 protocol ISearchListPresenterToView: IPresenterToView {
+    func setNavigationBar(title: String?,
+                          leftButton: CustomNavigationBar.ButtonType?,
+                          rightButton: CustomNavigationBar.ButtonType?)
     func setupCollectionView()
 }
 
