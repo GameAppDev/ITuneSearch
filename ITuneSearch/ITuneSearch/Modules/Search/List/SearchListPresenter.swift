@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ITSUtils
 
 final class SearchListPresenter {
     
@@ -13,6 +14,7 @@ final class SearchListPresenter {
     weak var view: ISearchListPresenterToView?
     var interactor: ISearchListPresenterToInteractor?
     var router: ISearchListPresenterToRouter?
+    var imageService: ITSImageServiceProtocol?
 }
 
 extension SearchListPresenter: ISearchListViewToPresenter {
@@ -35,4 +37,8 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
     }
     
     func listItemSelected(index: Int) { }
+    
+    func getImageServiceProtocol() -> ITSImageServiceProtocol? {
+        imageService
+    }
 }

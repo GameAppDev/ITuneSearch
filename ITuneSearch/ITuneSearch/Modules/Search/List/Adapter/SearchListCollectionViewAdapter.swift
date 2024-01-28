@@ -42,7 +42,8 @@ extension SearchListCollectionViewAdapter: UICollectionViewDataSource {
         
         cell.configureCell(
             urlString: searchItem.imageUrlString,
-            name: searchItem.name
+            name: searchItem.name,
+            imageService: presenter?.getImageServiceProtocol()
         )
         
         return cell

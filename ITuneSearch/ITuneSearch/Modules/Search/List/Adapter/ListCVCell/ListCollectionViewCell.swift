@@ -15,7 +15,6 @@ final class ListCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: Properties
-    var imageService: ITSImageServiceProtocol?
     var imageDataTask: URLSessionDataTask?
     
     // MARK: Methods
@@ -34,8 +33,11 @@ final class ListCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: Configure
-    func configureCell(urlString: String?, name: String?) {
-        imageService = ITSDependencyContainer.getDefaultImageService()
+    func configureCell(
+        urlString: String?,
+        name: String?,
+        imageService: ITSImageServiceProtocol?
+    ) {
         nameLabel.text = name ?? ""
         
         imageDataTask?.cancel()

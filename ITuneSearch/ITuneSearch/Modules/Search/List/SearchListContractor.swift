@@ -7,6 +7,7 @@
 
 import Foundation
 import ITSNetwork
+import ITSUtils
 
 protocol ISearchListPresenterToView: IPresenterToView {
     func setupCollectionView()
@@ -24,4 +25,6 @@ protocol ISearchListInteractorToPresenter: IInteractorToPresenter { }
 
 protocol ISearchListPresenterToRouter: IPresenterToRouter { }
 
-protocol ISearchListAdapterToPresenter: IAdapterToPresenter { }
+protocol ISearchListAdapterToPresenter: IAdapterToPresenter {
+    func getImageServiceProtocol() -> ITSImageServiceProtocol?
+}

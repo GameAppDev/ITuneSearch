@@ -18,6 +18,7 @@ struct SearchListBuilder {
         let presenter = SearchListPresenter()
         let interactor = SearchListInteractor(searchList: searchList)
         let collectionViewAdapter = SearchListCollectionViewAdapter()
+        let imageService = ITSDependencyContainer.getDefaultImageService()
         
         router.view = viewController
         
@@ -28,6 +29,7 @@ struct SearchListBuilder {
         presenter.router = router
         presenter.view = viewController
         presenter.interactor = interactor
+        presenter.imageService = imageService
         
         interactor.presenter = presenter
         
