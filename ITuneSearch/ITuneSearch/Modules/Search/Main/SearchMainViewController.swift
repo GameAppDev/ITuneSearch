@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SearchMainViewController: UIViewController {
+final class SearchMainViewController: BaseViewController {
 
     // MARK: Outlets
     @IBOutlet private weak var itemPaginationView: PaginationView!
@@ -17,6 +17,18 @@ final class SearchMainViewController: UIViewController {
 }
 
 extension SearchMainViewController: ISearchMainPresenterToView {
+    
+    func setNavigationBar(
+        title: String?,
+        leftButton: CustomNavigationBar.ButtonType?,
+        rightButton: CustomNavigationBar.ButtonType?
+    ) {
+        setNavigationBarItems(
+            title: title,
+            leftButton: leftButton,
+            rightButton: rightButton
+        )
+    }
     
     func setupPaginationView(dataList: [PaginationModel]) {
         itemPaginationView.dataList = dataList
@@ -38,5 +50,11 @@ extension SearchMainViewController {
         super.viewDidLoad()
         
         presenter?.viewDidLoad?()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter?.viewWillAppear?()
     }
 }

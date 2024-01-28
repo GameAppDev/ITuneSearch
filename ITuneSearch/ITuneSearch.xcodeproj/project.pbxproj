@@ -111,6 +111,7 @@
 		5C7C97702B65D28900E40589 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C97632B65D28900E40589 /* Roboto-Black.ttf */; };
 		5C7C97722B65D29100E40589 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97712B65D29100E40589 /* Fonts.swift */; };
 		5C7C97742B65D29A00E40589 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97732B65D29A00E40589 /* Colours.swift */; };
+		5C7C97752B65D44500E40589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96AA2B651C8800E40589 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1024,6 +1025,7 @@
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
 				5C7C97702B65D28900E40589 /* Roboto-Black.ttf in Resources */,
 				5C7C971D2B6572D100E40589 /* ListCollectionViewCell.xib in Resources */,
+				5C7C97752B65D44500E40589 /* Localizable.strings in Resources */,
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
 				5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */,
 				5C7C97642B65D28900E40589 /* Roboto-LightItalic.ttf in Resources */,

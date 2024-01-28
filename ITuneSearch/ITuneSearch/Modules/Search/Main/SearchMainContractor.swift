@@ -9,6 +9,9 @@ import Foundation
 import ITSNetwork
 
 protocol ISearchMainPresenterToView: IPresenterToView {
+    func setNavigationBar(title: String?,
+                          leftButton: CustomNavigationBar.ButtonType?,
+                          rightButton: CustomNavigationBar.ButtonType?)
     func setupPaginationView(dataList: [PaginationModel])
     func setPaginationView(index: Int)
     func setPaginationView(isHidden: Bool)

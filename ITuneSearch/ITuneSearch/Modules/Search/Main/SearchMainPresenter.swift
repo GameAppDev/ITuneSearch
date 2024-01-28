@@ -40,6 +40,14 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
             )
         }
     }
+    
+    func viewWillAppear() {
+        view?.setNavigationBar(
+            title: "search".localized,
+            leftButton: nil,
+            rightButton: nil
+        )
+    }
 }
 
 extension SearchMainPresenter: ISearchMainInteractorToPresenter {
