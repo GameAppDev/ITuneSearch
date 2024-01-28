@@ -17,7 +17,7 @@ final class SearchDetailRouter {
     static func returnVC(
         listItem: SearchResponseResult?
     ) -> UIViewController {
-        return SearchDetailBuilder.buildModule(listItem: listItem)
+        SearchDetailBuilder.buildModule(listItem: listItem)
     }
 }
 

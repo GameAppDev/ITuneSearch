@@ -7,8 +7,22 @@
 
 import Foundation
 import ITSNetwork
+import ITSUtils
 
-protocol ISearchDetailPresenterToView: IPresenterToView { }
+protocol ISearchDetailPresenterToView: IPresenterToView {
+    func setNavigationBar(title: String?,
+                          leftButton: CustomNavigationBar.ButtonType?,
+                          rightButton: CustomNavigationBar.ButtonType?)
+    func setupImageView()
+    func setImageView(urlString: String?,
+                      imageService: ITSImageServiceProtocol?)
+    func setupNameLabel()
+    func setupReleaseDateLabel()
+    func setupCountryLabel()
+    func setNameLabel(text: String?)
+    func setReleaseDateLabel(text: String?)
+    func setCountryLabel(text: String?)
+}
 
 protocol ISearchDetailViewToPresenter: IViewToPresenter { }
 
