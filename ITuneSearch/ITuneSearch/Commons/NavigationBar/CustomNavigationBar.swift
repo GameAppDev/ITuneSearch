@@ -60,9 +60,9 @@ final class CustomNavigationBar: UIView {
             containerView.backgroundColor = .navbarBGColour
             containerView.setShadow(
                 color: .shadowColour,
-                opacity: .init(0.75),
+                opacity: .init(0.5),
                 offSet: .init(width: 0, height: 4),
-                radius: .init(12)
+                radius: .init(10)
             )
             
             titleLabel.font = .navbarTitleFont

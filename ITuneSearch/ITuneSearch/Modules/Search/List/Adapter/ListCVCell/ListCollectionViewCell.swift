@@ -28,6 +28,21 @@ final class ListCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Methods
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupViews()
+    }
+    
+    private func setupViews() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            
+            nameLabel.font = .listItemTextFont
+            nameLabel.textColor = .listItemTextColour
+        }
+    }
+    
     // MARK: Configure
     func configureCell(urlString: String?, name: String?) {
         nameLabel.text = name ?? ""

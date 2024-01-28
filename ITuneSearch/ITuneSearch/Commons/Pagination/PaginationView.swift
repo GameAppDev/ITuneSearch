@@ -33,14 +33,14 @@ final class PaginationView: UIView {
     var dataList: [PaginationModel] = [] {
         didSet {
             var options = PagingOptions()
-            options.menuBackgroundColor = .red
+            options.menuBackgroundColor = .paginationBGColour
             options.menuPosition = .top
             options.menuInteraction = .scrolling
             options.menuItemSize = .selfSizing(estimatedWidth: 50, height: 40)
-            options.font = .boldSystemFont(ofSize: .init(14))
-            options.textColor = .white.withAlphaComponent(0.6)
-            options.selectedFont = .boldSystemFont(ofSize: .init(14))
-            options.selectedTextColor = .white
+            options.font = .paginationTextFont ?? .systemFont(ofSize: .init(16))
+            options.textColor = .paginationTextColour.withAlphaComponent(0.6)
+            options.selectedFont = .paginationTextFont ?? .systemFont(ofSize: .init(16))
+            options.selectedTextColor = .paginationTextColour
             options.borderOptions = .hidden
             options.selectedScrollPosition = .preferCentered
             options.indicatorOptions = .hidden
