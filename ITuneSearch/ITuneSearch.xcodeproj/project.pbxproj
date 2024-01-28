@@ -112,6 +112,13 @@
 		5C7C97722B65D29100E40589 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97712B65D29100E40589 /* Fonts.swift */; };
 		5C7C97742B65D29A00E40589 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C97732B65D29A00E40589 /* Colours.swift */; };
 		5C7C97752B65D44500E40589 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C96AA2B651C8800E40589 /* Localizable.strings */; };
+		5CD114CC2B66B6B300208D6D /* SearchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD114CB2B66B6B300208D6D /* SearchDetailBuilder.swift */; };
+		5CD114CE2B66B6B900208D6D /* SearchDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD114CD2B66B6B900208D6D /* SearchDetailRouter.swift */; };
+		5CD114D02B66B6C100208D6D /* SearchDetailContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD114CF2B66B6C100208D6D /* SearchDetailContractor.swift */; };
+		5CD114D22B66B6CB00208D6D /* SearchDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD114D12B66B6CB00208D6D /* SearchDetailPresenter.swift */; };
+		5CD114D62B66B6E100208D6D /* SearchDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD114D52B66B6E100208D6D /* SearchDetailInteractor.swift */; };
+		5CD114D92B66B6EB00208D6D /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD114D72B66B6EB00208D6D /* SearchDetailViewController.swift */; };
+		5CD114DA2B66B6EB00208D6D /* SearchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD114D82B66B6EB00208D6D /* SearchDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +301,13 @@
 		5C7C97632B65D28900E40589 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		5C7C97712B65D29100E40589 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		5C7C97732B65D29A00E40589 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		5CD114CB2B66B6B300208D6D /* SearchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailBuilder.swift; sourceTree = "<group>"; };
+		5CD114CD2B66B6B900208D6D /* SearchDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouter.swift; sourceTree = "<group>"; };
+		5CD114CF2B66B6C100208D6D /* SearchDetailContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailContractor.swift; sourceTree = "<group>"; };
+		5CD114D12B66B6CB00208D6D /* SearchDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailPresenter.swift; sourceTree = "<group>"; };
+		5CD114D52B66B6E100208D6D /* SearchDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailInteractor.swift; sourceTree = "<group>"; };
+		5CD114D72B66B6EB00208D6D /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		5CD114D82B66B6EB00208D6D /* SearchDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +456,7 @@
 				5C7C95D62B6463AC00E40589 /* Splash */,
 				5C7C96C22B65247E00E40589 /* Root */,
 				5C7C96EA2B65555500E40589 /* Search */,
+				5CD114C92B66B69700208D6D /* Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -777,6 +792,28 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		5CD114C92B66B69700208D6D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5CD114CA2B66B6A400208D6D /* Builder */,
+				5CD114CF2B66B6C100208D6D /* SearchDetailContractor.swift */,
+				5CD114CD2B66B6B900208D6D /* SearchDetailRouter.swift */,
+				5CD114D12B66B6CB00208D6D /* SearchDetailPresenter.swift */,
+				5CD114D52B66B6E100208D6D /* SearchDetailInteractor.swift */,
+				5CD114D72B66B6EB00208D6D /* SearchDetailViewController.swift */,
+				5CD114D82B66B6EB00208D6D /* SearchDetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		5CD114CA2B66B6A400208D6D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				5CD114CB2B66B6B300208D6D /* SearchDetailBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1021,6 +1058,7 @@
 				5C7C972A2B657D6000E40589 /* CustomNavigationBar.xib in Resources */,
 				5C7C97662B65D28900E40589 /* Roboto-BoldItalic.ttf in Resources */,
 				5C7C97692B65D28900E40589 /* Roboto-Light.ttf in Resources */,
+				5CD114DA2B66B6EB00208D6D /* SearchDetailViewController.xib in Resources */,
 				5C7C976D2B65D28900E40589 /* Roboto-Thin.ttf in Resources */,
 				5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */,
 				5C7C97702B65D28900E40589 /* Roboto-Black.ttf in Resources */,
@@ -1091,6 +1129,7 @@
 				5C7C97742B65D29A00E40589 /* Colours.swift in Sources */,
 				5C7C971C2B6572D100E40589 /* ListCollectionViewCell.swift in Sources */,
 				5C7C97062B65572700E40589 /* SearchListPresenter.swift in Sources */,
+				5CD114CC2B66B6B300208D6D /* SearchDetailBuilder.swift in Sources */,
 				5C7C96C92B65249F00E40589 /* RootRouter.swift in Sources */,
 				5C7C97042B65572000E40589 /* SearchListRouter.swift in Sources */,
 				5C7C97242B65775F00E40589 /* BaseContractor.swift in Sources */,
@@ -1099,12 +1138,16 @@
 				5C7C96CD2B6524B000E40589 /* RootInteractor.swift in Sources */,
 				5C7C95DD2B6463D800E40589 /* SplashRouter.swift in Sources */,
 				5C7C95CF2B64627F00E40589 /* AppDelegate+Url.swift in Sources */,
+				5CD114D62B66B6E100208D6D /* SearchDetailInteractor.swift in Sources */,
 				5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */,
 				5C7C97222B65772500E40589 /* BaseViewController.swift in Sources */,
+				5CD114D02B66B6C100208D6D /* SearchDetailContractor.swift in Sources */,
 				5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */,
 				5C7C96F02B6556AE00E40589 /* SearchMainBuilder.swift in Sources */,
 				5C7C96F92B6556EE00E40589 /* SearchMainInteractor.swift in Sources */,
+				5CD114D22B66B6CB00208D6D /* SearchDetailPresenter.swift in Sources */,
 				5C7C95D92B6463BD00E40589 /* SplashBuilder.swift in Sources */,
+				5CD114D92B66B6EB00208D6D /* SearchDetailViewController.swift in Sources */,
 				5C7C95DB2B6463CC00E40589 /* SplashContractor.swift in Sources */,
 				5C7C97292B657D6000E40589 /* CustomNavigationBar.swift in Sources */,
 				5C7C97722B65D29100E40589 /* Fonts.swift in Sources */,
@@ -1123,6 +1166,7 @@
 				5C7C96D82B6534A100E40589 /* CustomTabBar.swift in Sources */,
 				5C7C95CD2B64626900E40589 /* AppDelegate+Notifications.swift in Sources */,
 				5C7C96F32B6556D200E40589 /* SearchMainContractor.swift in Sources */,
+				5CD114CE2B66B6B900208D6D /* SearchDetailRouter.swift in Sources */,
 				5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
