@@ -14,7 +14,7 @@ final class RootRouter {
     
     // MARK: Static Method
     static func returnVC() -> UIViewController {
-        return RootBuilder.buildModule()
+        RootBuilder.buildModule()
     }
 }
 

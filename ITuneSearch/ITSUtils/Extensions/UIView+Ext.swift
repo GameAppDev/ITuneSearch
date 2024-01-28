@@ -41,4 +41,9 @@ extension UIView {
             layer.rasterizationScale = UIScreen.main.scale
         }
     }
+    
+    public func roundAllCorners(radius: CGFloat) {
+        layer.masksToBounds = true
+        layer.cornerRadius = radius
+    }
 }

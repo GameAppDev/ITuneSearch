@@ -9,6 +9,12 @@ import Foundation
 
 extension DateFormatter {
 
+    public static let iso8601WithTimeZoneDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return formatter
+    }()
+    
     public static let dayAndMonthAndYearWithDotDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"

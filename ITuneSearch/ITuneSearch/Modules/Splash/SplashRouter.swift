@@ -15,7 +15,7 @@ final class SplashRouter {
     
     // MARK: Static Method
     static func returnVC() -> UIViewController {
-        return SplashBuilder.buildModule()
+        SplashBuilder.buildModule()
     }
 }
 

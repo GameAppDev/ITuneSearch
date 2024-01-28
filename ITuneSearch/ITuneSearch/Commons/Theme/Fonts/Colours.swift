@@ -23,8 +23,13 @@ extension UIColor {
     static let paginationBGColour   = UIColor.primaryColour
     static let paginationTextColour = UIColor.secondaryColour
     
-    // MARK: MenuListItem
-    static let listItemTextColour = UIColor.primaryColour
+    // MARK: SearchList
+    static let listItemNameColour = UIColor.primaryColour
+    
+    // MARK: SearchDetail
+    static let detailItemNameColour        = UIColor.primaryColour
+    static let detailItemReleaseDateColour = UIColor.primaryColour
+    static let detailItemCountryColour     = UIColor.primaryColour
 }
 
 extension UIColor {
