@@ -52,8 +52,11 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
         imageService
     }
     
-    func handleScrolledToBottom() {
-        mainDelegate?.fetchMoreSearch()
+    func handleCollectionViewDisplayed(currentIndex: Int) {
+        if let listCount = interactor?.getSearchListCount(),
+           currentIndex == (listCount - 1) {
+            mainDelegate?.fetchMoreSearch()
+        }
     }
 }
 

@@ -64,22 +64,10 @@ extension SearchListCollectionViewAdapter: UICollectionViewDelegate {
         willDisplay cell: UICollectionViewCell,
         forItemAt indexPath: IndexPath
     ) {
-        indexPath.row == ((presenter?.rowsCount() ?? 0) - 1) ? presenter?.handleScrolledToBottom() : nil
+        presenter?.handleCollectionViewDisplayed(
+            currentIndex: indexPath.row
+        )
     }
-    
-    /*
-    func scrollViewDidEndDragging(
-        _ scrollView: UIScrollView,
-        willDecelerate decelerate: Bool
-    ) {
-        let currentOffset = scrollView.contentOffset.y
-        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        
-        if (maximumOffset - currentOffset) <= -150.0 {
-            presenter?.handleScrolledToBottom()
-        }
-    }
-    */
 }
 
 extension SearchListCollectionViewAdapter: UICollectionViewDelegateFlowLayout {
