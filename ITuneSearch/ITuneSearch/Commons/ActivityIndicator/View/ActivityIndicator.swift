@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 @IBDesignable
-internal class ActivityIndicator: UIView {
+final class ActivityIndicator: UIView {
     
     // MARK: Outlet
     @IBOutlet private weak var indicatorAnimationView: LottieAnimationView!

@@ -43,7 +43,13 @@ final class PaginationView: UIView {
             options.selectedTextColor = .paginationTextColour
             options.borderOptions = .hidden
             options.selectedScrollPosition = .preferCentered
-            options.indicatorOptions = .hidden
+            options.indicatorColor = .paginationTextColour
+            options.indicatorOptions = .visible(
+                height: 2,
+                zIndex: 0,
+                spacing: UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2),
+                insets: .zero
+            )
             
             let pagingViewController = PagingViewController(
                 options: options,
