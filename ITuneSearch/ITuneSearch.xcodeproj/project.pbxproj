@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C05C1DC2B67DFA300A0F076 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05C1DB2B67DFA300A0F076 /* ActivityIndicatorManager.swift */; };
+		5C05C1DF2B67DFBF00A0F076 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05C1DD2B67DFBF00A0F076 /* ActivityIndicator.swift */; };
+		5C05C1E02B67DFBF00A0F076 /* ActivityIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C05C1DE2B67DFBF00A0F076 /* ActivityIndicator.xib */; };
+		5C05C1E22B67E02300A0F076 /* indicator-animation-view.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C05C1E12B67E02300A0F076 /* indicator-animation-view.json */; };
+		5C05C1E52B67E0C700A0F076 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5C05C1E42B67E0C700A0F076 /* Lottie */; };
 		5C7C959C2B64614500E40589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C959B2B64614500E40589 /* AppDelegate.swift */; };
 		5C7C95A52B64614500E40589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C95A42B64614500E40589 /* Assets.xcassets */; };
 		5C7C95A82B64614500E40589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C95A62B64614500E40589 /* LaunchScreen.storyboard */; };
@@ -196,6 +201,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C05C1DB2B67DFA300A0F076 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		5C05C1DD2B67DFBF00A0F076 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5C05C1DE2B67DFBF00A0F076 /* ActivityIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicator.xib; sourceTree = "<group>"; };
+		5C05C1E12B67E02300A0F076 /* indicator-animation-view.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "indicator-animation-view.json"; sourceTree = "<group>"; };
 		5C7C95982B64614500E40589 /* ITuneSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITuneSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7C959B2B64614500E40589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C7C95A42B64614500E40589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -315,6 +324,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C05C1E52B67E0C700A0F076 /* Lottie in Frameworks */,
 				5C7C96382B64688900E40589 /* ITSNetwork.framework in Frameworks */,
 				5C7C96802B650BDD00E40589 /* ITSUtils.framework in Frameworks */,
 				5C7C965D2B647B4200E40589 /* Swinject in Frameworks */,
@@ -371,6 +381,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C05C1D82B67DF7D00A0F076 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				5C05C1DA2B67DF9400A0F076 /* View */,
+				5C05C1D92B67DF8B00A0F076 /* Entity */,
+				5C05C1DB2B67DFA300A0F076 /* ActivityIndicatorManager.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		5C05C1D92B67DF8B00A0F076 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C05C1E12B67E02300A0F076 /* indicator-animation-view.json */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5C05C1DA2B67DF9400A0F076 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C05C1DD2B67DFBF00A0F076 /* ActivityIndicator.swift */,
+				5C05C1DE2B67DFBF00A0F076 /* ActivityIndicator.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5C7C958F2B64614500E40589 = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +666,7 @@
 		5C7C96D52B65347900E40589 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				5C05C1D82B67DF7D00A0F076 /* ActivityIndicator */,
 				5C7C97542B65D27200E40589 /* Theme */,
 				5C7C97262B657D3E00E40589 /* NavigationBar */,
 				5C7C97202B65770C00E40589 /* Base */,
@@ -855,6 +893,7 @@
 			packageProductDependencies = (
 				5C7C965C2B647B4200E40589 /* Swinject */,
 				5C7C970E2B655AD700E40589 /* Parchment */,
+				5C05C1E42B67E0C700A0F076 /* Lottie */,
 			);
 			productName = ITuneSearch;
 			productReference = 5C7C95982B64614500E40589 /* ITuneSearch.app */;
@@ -1028,6 +1067,7 @@
 				5C7C964E2B64710400E40589 /* XCRemoteSwiftPackageReference "Reachability" */,
 				5C7C965B2B647B4200E40589 /* XCRemoteSwiftPackageReference "Swinject" */,
 				5C7C970D2B655AD700E40589 /* XCRemoteSwiftPackageReference "Parchment" */,
+				5C05C1E32B67E0C700A0F076 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 5C7C95992B64614500E40589 /* Products */;
 			projectDirPath = "";
@@ -1065,9 +1105,11 @@
 				5C7C971D2B6572D100E40589 /* ListCollectionViewCell.xib in Resources */,
 				5C7C97752B65D44500E40589 /* Localizable.strings in Resources */,
 				5C7C95E52B64641200E40589 /* SplashViewController.xib in Resources */,
+				5C05C1E02B67DFBF00A0F076 /* ActivityIndicator.xib in Resources */,
 				5C7C96D12B6524BB00E40589 /* RootViewController.xib in Resources */,
 				5C7C97642B65D28900E40589 /* Roboto-LightItalic.ttf in Resources */,
 				5C7C96FD2B6556F700E40589 /* SearchMainViewController.xib in Resources */,
+				5C05C1E22B67E02300A0F076 /* indicator-animation-view.json in Resources */,
 				5C7C976F2B65D28900E40589 /* Roboto-MediumItalic.ttf in Resources */,
 				5C7C97652B65D28900E40589 /* Roboto-Italic.ttf in Resources */,
 				5C7C95A52B64614500E40589 /* Assets.xcassets in Resources */,
@@ -1141,6 +1183,7 @@
 				5CD114D62B66B6E100208D6D /* SearchDetailInteractor.swift in Sources */,
 				5C7C97122B655BE500E40589 /* PaginationView.swift in Sources */,
 				5C7C97222B65772500E40589 /* BaseViewController.swift in Sources */,
+				5C05C1DF2B67DFBF00A0F076 /* ActivityIndicator.swift in Sources */,
 				5CD114D02B66B6C100208D6D /* SearchDetailContractor.swift in Sources */,
 				5C7C96C72B65249800E40589 /* RootContractor.swift in Sources */,
 				5C7C96F02B6556AE00E40589 /* SearchMainBuilder.swift in Sources */,
@@ -1169,6 +1212,7 @@
 				5CD114CE2B66B6B900208D6D /* SearchDetailRouter.swift in Sources */,
 				5C7C97152B655C5400E40589 /* PaginationModel.swift in Sources */,
 				5C7C95DF2B6463E600E40589 /* SplashPresenter.swift in Sources */,
+				5C05C1DC2B67DFA300A0F076 /* ActivityIndicatorManager.swift in Sources */,
 				5C7C95E42B64641200E40589 /* SplashViewController.swift in Sources */,
 				5C7C972C2B657E1300E40589 /* NavigationBarProtocol.swift in Sources */,
 				5C7C970B2B65573900E40589 /* SearchListViewController.swift in Sources */,
@@ -1885,6 +1929,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C05C1E32B67E0C700A0F076 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.0;
+			};
+		};
 		5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1920,6 +1972,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5C05C1E42B67E0C700A0F076 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C05C1E32B67E0C700A0F076 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		5C7C96482B646B1100E40589 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5C7C96472B646B1100E40589 /* XCRemoteSwiftPackageReference "Moya" */;

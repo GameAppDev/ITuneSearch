@@ -18,11 +18,11 @@ protocol IPresenterToView: AnyObject {
 extension UIViewController: IPresenterToView {
     
     func showIndicatorView() {
-        // TODO: Handle
+        ActivityIndicatorManager.shared.showIndicator()
     }
     
     func hideIndicatorView() {
-        // TODO: Handle
+        ActivityIndicatorManager.shared.hideIndicator()
     }
     
     func showPopup(identifier: String?,
