@@ -51,7 +51,7 @@ extension SearchMainViewController: ISearchMainPresenterToView {
         itemSearchBar.resignFirstResponder()
     }
     
-    func setupPaginationView(dataList: [PaginationModel]) {
+    func setPaginationView(dataList: [PaginationModel]) {
         itemPaginationView.dataList = dataList
     }
     
@@ -95,5 +95,11 @@ extension SearchMainViewController {
         super.viewWillAppear(animated)
         
         presenter?.viewWillAppear?()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        presenter?.viewWillLayoutSubviews?()
     }
 }

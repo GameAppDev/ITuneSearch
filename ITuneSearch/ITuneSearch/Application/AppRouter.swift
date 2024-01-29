@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class AppRouter {
+final class AppRouter {
     
     static let shared = AppRouter()
     

@@ -14,7 +14,7 @@ protocol ISearchMainPresenterToView: IPresenterToView {
                           rightButton: CustomNavigationBar.ButtonType?)
     func setupItemSearchBar()
     func dismissSearchBarKeyboard()
-    func setupPaginationView(dataList: [PaginationModel])
+    func setPaginationView(dataList: [PaginationModel])
     func setPaginationView(index: Int)
     func setPaginationView(isHidden: Bool)
     func clearPaginationViews()

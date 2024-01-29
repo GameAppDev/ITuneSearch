@@ -27,7 +27,6 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
     
     func viewDidLoad() {
         setupNetworkListener()
-        view?.setupItemSearchBar()
     }
     
     func viewWillAppear() {
@@ -36,6 +35,10 @@ extension SearchMainPresenter: ISearchMainViewToPresenter {
             leftButton: nil,
             rightButton: nil
         )
+    }
+    
+    func viewWillLayoutSubviews() {
+        view?.setupItemSearchBar()
     }
     
     func handleSearchBarSearchClicked(text: String?) {
@@ -153,7 +156,7 @@ extension SearchMainPresenter {
             )
         }
         view?.clearPaginationViews()
-        view?.setupPaginationView(dataList: paginationList)
+        view?.setPaginationView(dataList: paginationList)
         view?.setPaginationView(index: 0)
         view?.setPaginationView(isHidden: false)
     }
