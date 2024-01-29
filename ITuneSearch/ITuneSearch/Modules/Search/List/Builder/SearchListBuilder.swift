@@ -12,7 +12,8 @@ struct SearchListBuilder {
 
     static func buildModule(
         searchList: [SearchResponseResult]?,
-        mainDelegate: ISearchMainProtocol?
+        mainDelegate: ISearchMainProtocol?,
+        innerDelegate: @escaping (ISearchInnerProtocol) -> Void
     ) -> UIViewController {
         let router = SearchListRouter()
         let viewController = SearchListViewController()
@@ -36,6 +37,8 @@ struct SearchListBuilder {
         interactor.presenter = presenter
         
         collectionViewAdapter.presenter = presenter
+        
+        innerDelegate(presenter)
         
         return viewController
     }

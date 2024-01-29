@@ -17,6 +17,7 @@ protocol ISearchListPresenterToView: IPresenterToView {
 protocol ISearchListViewToPresenter: IViewToPresenter { }
 
 protocol ISearchListPresenterToInteractor: IPresenterToInteractor {
+    func setSearchList(_ list: [SearchResponseResult])
     func getSearchList() -> [SearchResponseResult]?
     func getSearchListCount() -> Int?
 }

@@ -46,8 +46,13 @@ protocol ISearchMainPresenterToRouter: IPresenterToRouter {
     func navigateToDetail(listItem: SearchResponseResult)
 }
 
-// MARK: Shared
+// MARK: Shared - Main
 protocol ISearchMainProtocol: AnyObject {
     func fetchMoreSearch()
     func handleListItemSelection(listItem: SearchResponseResult)
+}
+
+// MARK: Shared - Inner
+protocol ISearchInnerProtocol: AnyObject {
+    func searchMoreFetchedOnSuccess(list: [SearchResponseResult]?)
 }

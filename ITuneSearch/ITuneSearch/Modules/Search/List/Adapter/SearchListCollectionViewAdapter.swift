@@ -59,6 +59,15 @@ extension SearchListCollectionViewAdapter: UICollectionViewDelegate {
         presenter?.listItemSelected(index: indexPath.row)
     }
     
+    func collectionView(
+        _ collectionView: UICollectionView,
+        willDisplay cell: UICollectionViewCell,
+        forItemAt indexPath: IndexPath
+    ) {
+        indexPath.row == ((presenter?.rowsCount() ?? 0) - 1) ? presenter?.handleScrolledToBottom() : nil
+    }
+    
+    /*
     func scrollViewDidEndDragging(
         _ scrollView: UIScrollView,
         willDecelerate decelerate: Bool
@@ -70,6 +79,7 @@ extension SearchListCollectionViewAdapter: UICollectionViewDelegate {
             presenter?.handleScrolledToBottom()
         }
     }
+    */
 }
 
 extension SearchListCollectionViewAdapter: UICollectionViewDelegateFlowLayout {

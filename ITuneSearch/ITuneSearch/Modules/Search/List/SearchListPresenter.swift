@@ -7,6 +7,7 @@
 
 import Foundation
 import ITSUtils
+import ITSNetwork
 
 final class SearchListPresenter {
     
@@ -53,5 +54,16 @@ extension SearchListPresenter: ISearchListAdapterToPresenter {
     
     func handleScrolledToBottom() {
         mainDelegate?.fetchMoreSearch()
+    }
+}
+
+extension SearchListPresenter: ISearchInnerProtocol {
+    
+    func searchMoreFetchedOnSuccess(list: [SearchResponseResult]?) {
+        guard let list, list.isNotEmpty
+        else { return }
+        
+        interactor?.setSearchList(list)
+        view?.reloadCollectionView()
     }
 }

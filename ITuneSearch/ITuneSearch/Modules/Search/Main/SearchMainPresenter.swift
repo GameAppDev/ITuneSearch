@@ -18,6 +18,8 @@ final class SearchMainPresenter {
     var router: ISearchMainPresenterToRouter?
     var networkListener: ITSReachabilityListenerProtocol?
     
+    private var innerDelegates: [SearchResultPaginationType: ISearchInnerProtocol] = [:]
+    
     private var paginationNumber: Int = 20
 }
 
@@ -79,7 +81,21 @@ extension SearchMainPresenter: ISearchMainInteractorToPresenter {
         }
         
         interactor?.setSearchList(list)
-        setupPaginationView()
+        if isNewSearch {
+            setupPaginationView()
+        } else {
+            guard let paginationTypes = interactor?.getPaginationTypes(),
+                  paginationTypes.isNotEmpty
+            else { return }
+            
+            paginationTypes.forEach { type in
+                if let innerDelegate = innerDelegates[type] {
+                    innerDelegate.searchMoreFetchedOnSuccess(
+                        list: interactor?.getSearchList(by: type)
+                    )
+                }
+            }
+        }
     }
     
     func searchFetchedOnError(message: String?) {
@@ -126,7 +142,11 @@ extension SearchMainPresenter {
                 .init(
                     vc: SearchListRouter.returnVC(
                         searchList: interactor?.getSearchList(by: type),
-                        mainDelegate: self
+                        mainDelegate: self,
+                        innerDelegate: { [weak self] presenter in
+                            guard let self else { return }
+                            self.innerDelegates[type] = presenter
+                        }
                     ),
                     title: type.name
                 )

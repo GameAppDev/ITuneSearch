@@ -16,11 +16,13 @@ final class SearchListRouter {
     // MARK: Static Method
     static func returnVC(
         searchList: [SearchResponseResult]?,
-        mainDelegate: ISearchMainProtocol?
+        mainDelegate: ISearchMainProtocol?,
+        innerDelegate: @escaping (ISearchInnerProtocol) -> Void
     ) -> UIViewController {
         SearchListBuilder.buildModule(
             searchList: searchList,
-            mainDelegate: mainDelegate
+            mainDelegate: mainDelegate,
+            innerDelegate: innerDelegate
         )
     }
 }

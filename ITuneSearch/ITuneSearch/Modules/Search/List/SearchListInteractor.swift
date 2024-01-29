@@ -22,6 +22,10 @@ final class SearchListInteractor {
 
 extension SearchListInteractor: ISearchListPresenterToInteractor {
     
+    func setSearchList(_ list: [SearchResponseResult]) {
+        searchList = list
+    }
+    
     func getSearchList() -> [SearchResponseResult]? {
         searchList
     }

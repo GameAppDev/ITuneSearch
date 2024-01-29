@@ -20,8 +20,8 @@ final class SplashPresenter {
 extension SplashPresenter: ISplashViewToPresenter {
     
     func viewDidAppear() {
-        jailbreakControl?.check(canContinue: {
-            self.router?.navigateToSearchMain()
+        jailbreakControl?.check(canContinue: { [weak self] in
+            self?.router?.navigateToSearchMain()
         })
     }
 }
